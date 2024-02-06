@@ -21,7 +21,8 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-DISTFILES += \
+#DISTFILES += \
+resources.files = \
     images/Linux.jpg \
     images/Linux.png \
     images/MacOS.jpg \
@@ -29,4 +30,12 @@ DISTFILES += \
     images/OS2.jpg \
     images/OS2.png \
     images/Windows.jpg \
-    images/Windows.png
+    images/Windows.png \
+    images/Linux(old).png \
+    images/MacOS(old).png \
+    images/OS2(old).png \
+    images/Windows(old).png
+resources.prefix = /
+
+RESOURCES = resources
+

@@ -163,7 +163,7 @@ void MyWidget::brushChanged()
         conicalGradient.setColorAt(1.0, Qt::black);
         renderArea->setBrush(conicalGradient);
     } else if (style == Qt::TexturePattern) {
-        renderArea->setBrush(QBrush(QPixmap(":/images/brick.png")));
+        renderArea->setBrush(QBrush(QPixmap(":/images/MacOS.png")));
     } else {
         renderArea->setBrush(QBrush(Qt::green, style));
     }

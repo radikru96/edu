@@ -6,7 +6,7 @@ RenderArea::RenderArea(QWidget *parent)
     shape = Polygon;
     antialiased = false;
     transformed = false;
-    pixmap.load("../../images/Linux.png");
+    pixmap.load(":/images/Windows.png");
 
     setBackgroundRole(QPalette::Base);
     setAutoFillBackground(true);
