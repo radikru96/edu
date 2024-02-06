@@ -30,11 +30,11 @@ resources.files = \
     images/OS2.jpg \
     images/OS2.png \
     images/Windows.jpg \
+    images/Linux_old.png \
     images/Windows.png \
-    images/Linux(old).png \
-    images/MacOS(old).png \
-    images/OS2(old).png \
-    images/Windows(old).png
+    images/MacOS_old.png \
+    images/OS2_old.png \
+    images/Windows_old.png
 resources.prefix = /
 
 RESOURCES = resources

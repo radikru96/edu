@@ -6,7 +6,7 @@ RenderArea::RenderArea(QWidget *parent)
     shape = Polygon;
     antialiased = false;
     transformed = false;
-    pixmap.load(":/images/Windows.png");
+    pixmap.load(":/images/MacOS.png");
 
     setBackgroundRole(QPalette::Base);
     setAutoFillBackground(true);
@@ -69,7 +69,7 @@ void RenderArea::paintEvent(QPaintEvent * /* event */)
     path.cubicTo(80, 0, 50, 50, 80, 80);
 
     int startAngle = 20 * 16;
-    int arcLength = 120 * 16;
+    int arcLength = 200 * 16;
 
     QPainter painter(this);
     painter.setPen(pen);
@@ -127,7 +127,7 @@ void RenderArea::paintEvent(QPaintEvent * /* event */)
                 painter.drawText(rect, Qt::AlignCenter, tr("Qt by\nThe Qt Company"));
                 break;
             case Pixmap:
-                painter.drawPixmap(10, 10, pixmap);
+                painter.drawPixmap(5, 5, 90, 90, pixmap);
             }
             painter.restore();
         }
