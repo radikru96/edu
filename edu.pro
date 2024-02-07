@@ -9,12 +9,8 @@ CONFIG += qt object warn_on debug_and_release
 
 VPATH += ./src
 SOURCES += main.cpp \
-    src/MyWidget.cpp \
-    src/renderarea.cpp
 
-HEADERS += \
-    src/MyWidget.h \
-    src/renderarea.h
+HEADERS +=
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
