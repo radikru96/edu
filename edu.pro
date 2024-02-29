@@ -9,9 +9,8 @@ CONFIG += qt object warn_on debug_and_release
 
 VPATH += ./src
 SOURCES += main.cpp \
-        + window.cpp
 
-HEADERS += window.h \
+HEADERS +=
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
