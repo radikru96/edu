@@ -9,12 +9,12 @@ CONFIG += qt object warn_on debug_and_release
 
 VPATH += ./src
 SOURCES += main.cpp \
-    	+ MyWidget.cpp \
-    	+ renderarea.cpp
+        MyWidget.cpp \
+        renderarea.cpp
 
 HEADERS += \
-    	+ MyWidget.h \
-    	+ renderarea.h
+        MyWidget.h \
+        renderarea.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -24,15 +24,15 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 resources.files = \
     images/Linux.jpg \
     images/Linux.png \
+    images/Linux_old.png \
     images/MacOS.jpg \
     images/MacOS.png \
+    images/MacOS_old.png \
     images/OS2.jpg \
     images/OS2.png \
-    images/Windows.jpg \
-    images/Linux_old.png \
-    images/Windows.png \
-    images/MacOS_old.png \
     images/OS2_old.png \
+    images/Windows.jpg \
+    images/Windows.png \
     images/Windows_old.png
 resources.prefix = /
 
