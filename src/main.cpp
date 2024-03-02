@@ -8,6 +8,6 @@ int main(int argc, char *argv[])
     MyWidget wgt;
     wgt.setAttribute(Qt::WA_TranslucentBackground);
     wgt.show();
-    wgt.resize(201, 121);
+    wgt.resize(200, 20);
     return a.exec();
 }
