@@ -15,6 +15,7 @@ int main(int argc, char *argv[])
     QGraphicsLineItem *pLineItem = scene.addLine(QLineF(-10, -10, -80, -80), QPen(Qt::red, 2));
     pLineItem->setParentItem(pRectItem);
     pLineItem->setFlags(QGraphicsItem::ItemIsMovable);
+    pLineItem->setTransform(QTransform().shear( -0.5, 0.0 ), true);
     QGraphicsPixmapItem *pPixmapItem = scene.addPixmap(QPixmap(":/images/Windows.png"));
     pPixmapItem->setFlags(QGraphicsItem::ItemIsMovable);
 
