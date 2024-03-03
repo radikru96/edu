@@ -2,6 +2,7 @@
 ### from Max Schlee's book "Qt 5.10 Professional programming on C++".
 
 > Examples placed in other branches.
+
 > Used Qt 6.4.3
 
 ## Quick links:
