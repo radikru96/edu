@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
     QGraphicsTextItem *pTextItem = scene.addText("Move us with your mouse");
     pTextItem->setFlags(QGraphicsItem::ItemIsMovable);
     QGraphicsLineItem *pLineItem = scene.addLine(QLineF(-10, -10, -80, -80), QPen(Qt::red, 2));
+    pLineItem->setParentItem(pRectItem);
     pLineItem->setFlags(QGraphicsItem::ItemIsMovable);
     QGraphicsPixmapItem *pPixmapItem = scene.addPixmap(QPixmap(":/images/Windows.png"));
     pPixmapItem->setFlags(QGraphicsItem::ItemIsMovable);
