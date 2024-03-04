@@ -1,10 +1,10 @@
 # Qt demo projects
 ### from Max Schlee's book "Qt 5.10 Professional programming on C++".
 
-> Used Qt 6.4.3
+> Used `Qt 6.4.3`
 
 > [!IMPORTANT]
-> Examples placed in other branches.
+> Examples placed in other [branches](https://github.com/radikru96/QtEdu?tab=readme-ov-file#quick-links).
 
 ## Quick links:
 
