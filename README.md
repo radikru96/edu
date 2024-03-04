@@ -8,12 +8,8 @@
 
 ## Quick links:
 
-[QGraphics](../QGraphics/) 
-
-[QGraphicsEffect](https://github.com/radikru96/QtEdu/tree/QGraphicsEffect/) 
-
-[QPainter.drawText](https://github.com/radikru96/QtEdu/tree/QPainter.drawText/) 
-
-[WA-TranslucentBackground](https://github.com/radikru96/QtEdu/tree/WA_TranslucentBackground/) 
-
-[qtwidgets-painting-basicdrawing](https://github.com/radikru96/QtEdu/tree/qtwidgets-painting-basicdrawing/) 
++[QGraphics](../QGraphics/) 
++[QGraphicsEffect](../QGraphicsEffect/) 
++[QPainter.drawText](../QPainter.drawText/) 
++[WA-TranslucentBackground](../WA_TranslucentBackground/) 
++[qtwidgets-painting-basicdrawing](../qtwidgets-painting-basicdrawing/) 
