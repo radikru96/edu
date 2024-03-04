@@ -9,8 +9,12 @@ CONFIG += qt object warn_on debug_and_release
 
 VPATH += ./src
 SOURCES += main.cpp \
+        myview.cpp \
+        simpleitem.cpp
 
-HEADERS +=
+HEADERS += \
+        myview.h \
+        simpleitem.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
