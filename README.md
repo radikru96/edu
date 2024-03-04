@@ -13,4 +13,4 @@
 + [QPainter.drawText](../QPainter.drawText/) 
 + [WA-TranslucentBackground](../WA_TranslucentBackground/) 
 + [qtwidgets-painting-basicdrawing](../qtwidgets-painting-basicdrawing/) 
-+ [QGraphicEvents](../QGraphicsvents/) 
++ [QGraphicEvents](../QGraphicEvents/) 
