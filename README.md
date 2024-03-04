@@ -8,7 +8,7 @@
 
 ## Quick links:
 
-[QGraphics](https://github.com/radikru96/QtEdu/tree/QGraphics/) 
+[QGraphics](../QGraphics/) 
 
 [QGraphicsEffect](https://github.com/radikru96/QtEdu/tree/QGraphicsEffect/) 
 
