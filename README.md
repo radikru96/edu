@@ -8,12 +8,8 @@
 
 ## Quick links:
 
-+[QGraphics](../QGraphics/) 
-
-+[QGraphicsEffect](../QGraphicsEffect/) 
-
-+[QPainter.drawText](../QPainter.drawText/) 
-
-+[WA-TranslucentBackground](../WA_TranslucentBackground/) 
-
-+[qtwidgets-painting-basicdrawing](../qtwidgets-painting-basicdrawing/) 
++ [QGraphics](../QGraphics/) 
++ [QGraphicsEffect](../QGraphicsEffect/) 
++ [QPainter.drawText](../QPainter.drawText/) 
++ [WA-TranslucentBackground](../WA_TranslucentBackground/) 
++ [qtwidgets-painting-basicdrawing](../qtwidgets-painting-basicdrawing/) 
