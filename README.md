@@ -15,3 +15,4 @@
 + [qtwidgets-painting-basicdrawing](../qtwidgets-painting-basicdrawing/) 
 + [QGraphicEvents](../QGraphicEvents/) 
 + [QGraphicsProxyWidget](../QGraphicsProxyWidget/) 
++ [QMovie](../QMovie/) 
