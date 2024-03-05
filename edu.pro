@@ -23,6 +23,7 @@ resources.files = \
     images/Linux.png \
     images/MacOS.jpg \
     images/MacOS.png \
+    images/MacOS.gif \
     images/OS2.jpg \
     images/OS2.png \
     images/Windows.jpg \
