@@ -14,3 +14,4 @@
 + [WA-TranslucentBackground](../WA_TranslucentBackground/) 
 + [qtwidgets-painting-basicdrawing](../qtwidgets-painting-basicdrawing/) 
 + [QGraphicEvents](../QGraphicEvents/) 
++ [QGraphicsProxyWidget](../QGraphicsProxyWidget/) 
