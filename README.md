@@ -16,3 +16,4 @@
 + [QGraphicEvents](../QGraphicEvents/) 
 + [QGraphicsProxyWidget](../QGraphicsProxyWidget/) 
 + [QMovie](../QMovie/) 
++ [QtSvgWidget](../QtSvgWidget/) 
