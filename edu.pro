@@ -1,4 +1,4 @@
-QT = core widgets
+QT += core widgets svg svgwidgets
 
 CONFIG += qt object warn_on debug_and_release
 
@@ -30,7 +30,8 @@ resources.files = \
     images/Windows.png \
     images/MacOS_old.png \
     images/OS2_old.png \
-    images/Windows_old.png
+    images/Windows_old.png \
+    images/motion.svg
 resources.prefix = /
 
 RESOURCES = resources
