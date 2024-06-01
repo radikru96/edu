@@ -17,3 +17,5 @@
 + [QGraphicsProxyWidget](../QGraphicsProxyWidget/) 
 + [QMovie](../QMovie/) 
 + [QtSvgWidget](../QtSvgWidget/) 
++ [QPropertyAnimation](../QPropertyAnimation/) 
++ [QQAnimationGroup&EasingCurve](../QQAnimationGroup&EasingCurve/) 
