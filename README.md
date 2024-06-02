@@ -19,3 +19,4 @@
 + [QtSvgWidget](../QtSvgWidget/) 
 + [QPropertyAnimation](../QPropertyAnimation/) 
 + [QAnimationGroup&EasingCurve](../QAnimationGroup&EasingCurve/) 
++ [QStateMachine](../QStateMachine/) 
