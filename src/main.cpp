@@ -43,10 +43,9 @@ int main(int argc, char *argv[])
     QSignalTransition *ptrans1 = pStateOff->addTransition(pcmd, SIGNAL(clicked(bool)), pStateOn);
     QSignalTransition *ptrans2 = pStateOn->addTransition(pcmd, SIGNAL(clicked(bool)), pStateOff);
 
-    QPropertyAnimation *panim1 = new QPropertyAnimation(pcmd, "geometry");
-    ptrans1->addAnimation(panim1);
-    QPropertyAnimation *panim2 = new QPropertyAnimation(pcmd, "geometry");
-    ptrans2->addAnimation(panim2);
+    QPropertyAnimation *panim = new QPropertyAnimation(pcmd, "geometry");
+    ptrans1->addAnimation(panim);
+    ptrans2->addAnimation(panim);
 
 //  Start to work the StateMachine
     psm->start();
