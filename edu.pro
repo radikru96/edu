@@ -1,4 +1,4 @@
-QT = core widgets
+QT = core widgets statemachine
 
 CONFIG += qt object warn_on debug_and_release
 
