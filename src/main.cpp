@@ -1,10 +1,12 @@
 #include <QtWidgets>
 #include <QApplication>
+#include "ogldraw.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    QWidget wgt;
-    wgt.show();
+    OGLDraw oglDraw;
+    oglDraw.resize(400, 200);
+    oglDraw.show();
     return a.exec();
 }
