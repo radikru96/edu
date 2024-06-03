@@ -20,3 +20,4 @@
 + [QPropertyAnimation](../QPropertyAnimation/) 
 + [QAnimationGroup&EasingCurve](../QAnimationGroup&EasingCurve/) 
 + [QStateMachine](../QStateMachine/) 
++ [QOpenGLWidget](../QOpenGLWidget/) 
