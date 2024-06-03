@@ -21,3 +21,4 @@
 + [QAnimationGroup&EasingCurve](../QAnimationGroup&EasingCurve/) 
 + [QStateMachine](../QStateMachine/) 
 + [QOpenGLWidget](../QOpenGLWidget/) 
++ [QOpenGLWidget_GLenum](../QOpenGLWidget_GLenum/) 
