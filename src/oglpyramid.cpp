@@ -14,7 +14,7 @@ void OGLPyramid::resizeGL(int w, int h)
     glViewport(0, 0, (GLint)w, (GLint)h);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    glFrustum(-1.0, 1.0, -1.0, 1.0, 1.0, 10.0);
+    glFrustum(-1.0, 1.0, -1.0, 1.0, 0.9, 10.0);
 }
 
 void OGLPyramid::paintGL()
