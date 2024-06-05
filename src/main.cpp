@@ -1,10 +1,12 @@
 #include <QtWidgets>
 #include <QApplication>
+#include "oglpyramid.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    QWidget wgt;
-    wgt.show();
+    OGLPyramid oglPyramid;
+    oglPyramid.resize(200, 200);
+    oglPyramid.show();
     return a.exec();
 }

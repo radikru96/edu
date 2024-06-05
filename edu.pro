@@ -1,4 +1,4 @@
-QT = core widgets
+QT = core widgets opengl openglwidgets
 
 CONFIG += qt object warn_on debug_and_release
 
@@ -9,8 +9,10 @@ CONFIG += qt object warn_on debug_and_release
 
 VPATH += ./src
 SOURCES += main.cpp \
+    oglpyramid.cpp \
 
-HEADERS +=
+HEADERS += \
+    oglpyramid.h \
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
