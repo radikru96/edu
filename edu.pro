@@ -12,8 +12,10 @@ TARGET = $$branch_name
 
 VPATH += ./src
 SOURCES += main.cpp \
+    hexlineedit.cpp \
 
-HEADERS +=
+HEADERS += \
+    hexlineedit.h \
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
