@@ -7,7 +7,7 @@ void CustomWidget::paintEvent(QPaintEvent *)
     QLinearGradient gradient(0, 0, width(), height());
     float f = m_nProgress / 100.0f;
     gradient.setColorAt(0, Qt::black);
-    gradient.setColorAt(f, Qt::green);
+    gradient.setColorAt(f, QColor(0, (int)(255*f), 0));
     painter.fillRect(rect(), Qt::black);
     painter.setBrush(gradient);
     painter.drawRect(0, 0, (int)(width() * f), height());
