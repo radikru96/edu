@@ -12,8 +12,10 @@ TARGET = $$branch_name
 
 VPATH += ./src
 SOURCES += main.cpp \
+    customwidget.cpp \
 
-HEADERS +=
+HEADERS += \
+    customwidget.h \
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
