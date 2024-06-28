@@ -1,10 +1,30 @@
-#include <QtWidgets>
-#include <QApplication>
+#include "MyClass.h"
+#include <QTest>
 
-int main(int argc, char *argv[])
+class Test_MyClass : public QObject {
+    Q_OBJECT
+private slots:
+    void min();
+    void max();
+};
+
+void Test_MyClass::min()
 {
-    QApplication a(argc, argv);
-    QWidget wgt;
-    wgt.show();
-    return a.exec();
+    MyClass myClass;
+    QCOMPARE(myClass.min( 25, 0), 0);
+    QCOMPARE(myClass.min( -12, -5), -12);
+    QCOMPARE(myClass.min( 2007, 2007), 2007);
+    QCOMPARE(myClass.min( -12, 5), -12);
 }
+
+void Test_MyClass::max()
+{
+    MyClass myClass;
+    QCOMPARE(myClass.max( 25, 0), 25);
+    QCOMPARE(myClass.max( -12, -5), -5);
+    QCOMPARE(myClass.max( 2007, 2007), 2007);
+    QCOMPARE(myClass.max( -12, 5), 5);
+}
+
+QTEST_MAIN(Test_MyClass)
+#include "main.moc"
