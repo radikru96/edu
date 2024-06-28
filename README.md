@@ -25,3 +25,4 @@
 + [QOpenGL3D](../QOpenGL3D/) 
 + [HexLineEdit](../HexLineEdit/) 
 + [CustomWidget](../CustomWidget/) 
++ [QtTest](../QtTest/) 
