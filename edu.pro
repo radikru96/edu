@@ -1,4 +1,4 @@
-QT = core qml
+QT += core qml
 
 CONFIG += qt object warn_on debug_and_release
 
