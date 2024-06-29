@@ -11,7 +11,7 @@ void Test_QLineEdit::min()
 {
     QLineEdit txt;
     QTest::keyClicks( &txt, "ABCDEFGH" );
-    QCOMPARE( txt.text(), QString( "ABCDEFGH." ) );
+    QCOMPARE( txt.text(), QString( "ABCDEFGH" ) );
     QVERIFY( txt.isModified() );
 }
 
