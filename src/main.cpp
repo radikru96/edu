@@ -1,10 +1,11 @@
-#include <QtWidgets>
-#include <QApplication>
+#include <QtCore>
+#include <QJSEngine>
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    QWidget wgt;
-    wgt.show();
-    return a.exec();
+    QCoreApplication a(argc, argv);
+    QJSEngine scriptEngine;
+    QJSValue value = scriptEngine.evaluate( "2 * 8" );
+    qDebug() << value.toInt();
+    return 0;
 }
