@@ -1,10 +1,19 @@
 #include <QtWidgets>
-#include <QApplication>
+#include <QTest>
 
-int main(int argc, char *argv[])
+class Test_QLineEdit : public QObject {
+    Q_OBJECT
+private slots:
+    void min();
+};
+
+void Test_QLineEdit::min()
 {
-    QApplication a(argc, argv);
-    QWidget wgt;
-    wgt.show();
-    return a.exec();
+    QLineEdit txt;
+    QTest::keyClicks( &txt, "ABCDEFGH" );
+    QCOMPARE( txt.text(), QString( "ABCDEFGH." ) );
+    QVERIFY( txt.isModified() );
 }
+
+QTEST_MAIN(Test_QLineEdit)
+#include "main.moc"
