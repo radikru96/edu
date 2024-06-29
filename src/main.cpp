@@ -4,10 +4,10 @@
 class Test_QLineEdit : public QObject {
     Q_OBJECT
 private slots:
-    void min();
+    void edit();
 };
 
-void Test_QLineEdit::min()
+void Test_QLineEdit::edit()
 {
     QLineEdit txt;
     QTest::keyClicks( &txt, "ABCDEFGH" );
