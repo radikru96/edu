@@ -26,3 +26,4 @@
 + [HexLineEdit](../HexLineEdit/) 
 + [CustomWidget](../CustomWidget/) 
 + [QtTest](../QtTest/) 
++ [QtTest_Widgets](../QtTest_Widgets/) 
