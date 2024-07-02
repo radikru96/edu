@@ -13,7 +13,8 @@ TurtleWorkArea::TurtleWorkArea(QWidget *parent)
     lst << "Haus vom Nikolaus"
         << "Curly"
         << "Circle"
-        << "Fantasy";
+        << "Fantasy"
+        << "Golden ratio";
     pcbo->addItems(lst);
     connect( pcbo, SIGNAL(activated(int)), SLOT(slotApplyCode(int)) );
     slotApplyCode(0);
@@ -78,11 +79,20 @@ void TurtleWorkArea::slotApplyCode(int n)
                   "turtle.reset();\n"
                   "turtle.circle();\n";
         break;
-    default:
+    case 3:
         strCode = "turtle.reset();\n"
                   "for ( i = 0; i < 200; ++i ) {\n"
                   "    turtle.forward(i*2);\n"
                   "    turtle.left(91);}";
+        break;
+    default:
+        strCode = "turtle.reset();\n"
+                  "turtle.left(50);\n"
+                  "turtle.forward(190);\n"
+                  "turtle.left(155);\n"
+                  "for ( i = 1; i < 300; ++i ) {\n"
+                  "    turtle.forward(i*1.6180339887/15);\n"
+                  "    turtle.left(i*1.6180339887);}";
     }
     m_ptxt->setPlainText(strCode);
 }
