@@ -1,4 +1,4 @@
-QT = core widgets
+QT += core widgets qml gui
 
 CONFIG += qt object warn_on debug_and_release
 
@@ -12,8 +12,12 @@ TARGET = $$branch_name
 
 VPATH += ./src
 SOURCES += main.cpp \
+    turtleworkarea.cpp \
+    turtle.cpp
 
-HEADERS +=
+HEADERS += \
+    turtleworkarea.h \
+    turtle.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

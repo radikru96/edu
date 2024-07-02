@@ -1,10 +1,10 @@
-#include <QtWidgets>
 #include <QApplication>
+#include "turtleworkarea.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    QWidget wgt;
-    wgt.show();
+    TurtleWorkArea turtleWorkArea;
+    turtleWorkArea.show();
     return a.exec();
 }
