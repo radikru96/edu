@@ -1,4 +1,4 @@
-QT = core widgets
+QT += core widgets qml
 
 CONFIG += qt object warn_on debug_and_release
 
@@ -15,14 +15,9 @@ SOURCES += main.cpp \
 
 HEADERS +=
 
-# Default rules for deployment.
-qnx: target.path = /tmp/$${TARGET}/bin
-else: unix:!android: target.path = /opt/$${TARGET}/bin
-!isEmpty(target.path): INSTALLS += target
-
-#DISTFILES += \
+# DISTFILES += \
 resources.files = \
+    src/script.js
 resources.prefix = /
 
 RESOURCES = resources
-
