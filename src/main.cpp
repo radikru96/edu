@@ -1,10 +1,18 @@
-#include <QtWidgets>
-#include <QApplication>
+#include <QGuiApplication>
+#include <QQmlEngine>
+#include <QQmlFileSelector>
+#include <QQuickView>
+#include <QDir>
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    QWidget wgt;
-    wgt.show();
-    return a.exec();
+    QGuiApplication app(argc, argv);
+    QQuickView view;
+    QFileInfo fi( app.applicationFilePath() );
+    app.setApplicationName( fi.baseName() );
+    view.connect( view.engine(), SIGNAL(quit()), &app, SLOT(quit()) );
+    view.setSource( QUrl( "qrc:/src/main.qml" ) );
+    view.setResizeMode( QQuickView::SizeRootObjectToView );
+    view.show();
+    return app.exec();
 }

@@ -1,6 +1,6 @@
-QT += core widgets
+QT += quick qml
 
-CONFIG += qt object warn_on debug_and_release
+# CONFIG += qt object warn_on debug_and_release
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -21,8 +21,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 #DISTFILES += \
-# resources.files += \
-# resources.prefix = /
+resources.files += \
+    src/main.qml
+resources.prefix = /
 
-# RESOURCES = resources
-
+RESOURCES = resources
