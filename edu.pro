@@ -1,6 +1,6 @@
-QT += core widgets
+QT += quick qml
 
-CONFIG += qt object warn_on debug_and_release
+# CONFIG += qt object warn_on debug_and_release
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -33,8 +33,8 @@ resources.files += \
     images/Windows.png \
     images/MacOS_old.png \
     images/OS2_old.png \
-    images/Windows_old.png
+    images/Windows_old.png \
+    src/main.qml
 resources.prefix = /
 
 RESOURCES = resources
-
