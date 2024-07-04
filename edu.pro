@@ -1,4 +1,4 @@
-QT = core widgets
+QT += core widgets
 
 CONFIG += qt object warn_on debug_and_release
 
@@ -21,7 +21,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 #DISTFILES += \
-resources.files = \
+resources.files += \
     images/Linux.jpg \
     images/Linux.png \
     images/MacOS.jpg \
