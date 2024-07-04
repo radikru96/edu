@@ -31,3 +31,4 @@
 + [QJSEngine_Widget](../QJSEngine_Widget/) 
 + [QJSEngine_Turtle](../QJSEngine_Turtle/) 
 + [QJSEngine_connect](../QJSEngine_connect/) 
++ [QmlFlickableRepeater](../QmlFlickableRepeater/) 
