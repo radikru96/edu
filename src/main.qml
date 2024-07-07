@@ -1,20 +1,35 @@
 import QtQuick
+import QtQuick.Controls
 
-Flickable {
-    id: view
-    width: 250
-    height: 250
-    contentWidth: 500
-    contentHeight: 500
+ApplicationWindow {
+    width: buttons.width
+    height: buttons.height
+    visible: true
+    title: "Buttons"
 
-    Repeater {
-        model: [ "red", "white", "green", "yellow", "blue" ]
-        Rectangle{
-            color: modelData
-            width: view.contentWidth - index * 100
-            height: view.contentHeight - index * 100
-            x: view.contentWidth / 2 - width / 2
-            y: view.contentHeight / 2 - height / 2
+    Column {
+        id: buttons
+        CheckBox {
+            text: "Check Box"
+        }
+        DelayButton {
+            text: "Delay Button"
+        }
+        RadioButton {
+            text: "Radio Button"
+        }
+        RoundButton {
+            text: "Round Button"
+        }
+        Switch {
+            text: "Switch"
+        }
+        ToolButton {
+            text: "Tool Button"
+        }
+        Button {
+            text: "Quit"
+            onClicked: Qt.quit()
         }
     }
 }
