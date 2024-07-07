@@ -16,7 +16,10 @@ ApplicationWindow {
             text: "Delay Button"
         }
         RadioButton {
-            text: "Radio Button"
+            text: "Radio Button1"
+        }
+        RadioButton {
+            text: "Radio Button2"
         }
         RoundButton {
             text: "Round Button"
@@ -26,6 +29,9 @@ ApplicationWindow {
         }
         ToolButton {
             text: "Tool Button"
+        }
+        RadioButton {
+            text: "Radio Button3"
         }
         Button {
             text: "Quit"
