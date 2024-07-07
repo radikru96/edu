@@ -33,3 +33,4 @@
 + [QJSEngine_connect](../QJSEngine_connect/) 
 + [QmlFlickableRepeater](../QmlFlickableRepeater/) 
 + [QmlQuickControls_buttons](../QmlQuickControls_buttons/) 
++ [QmlQuickControls_header_footer](../QmlQuickControls_header_footer/) 
