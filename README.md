@@ -32,3 +32,4 @@
 + [QJSEngine_Turtle](../QJSEngine_Turtle/) 
 + [QJSEngine_connect](../QJSEngine_connect/) 
 + [QmlFlickableRepeater](../QmlFlickableRepeater/) 
++ [QmlQuickControls_buttons](../QmlQuickControls_buttons/) 
