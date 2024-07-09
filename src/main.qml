@@ -23,7 +23,7 @@ Item {
             ctx.clearRect( 0, 0, parent.width, parent.height )
             ctx.save()
             ctx.strokeStyle = "black"
-            ctx.lineWidth = 1
+            ctx.lineWidth = 0.5
 
             drawFantasy();
 
