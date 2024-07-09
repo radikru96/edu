@@ -1,27 +1,27 @@
 import QtQuick
 
 Rectangle{
-    color: "aqua"
-    width: img.width
-    height: img.height
-    Image {
-        id: img
-        x: 0
-        y: 0
-        smooth: true
-        source: "qrc:/images/MacOS.png"
-        transform: [
-            Scale {
-                origin.x: width / 2
-                origin.y: height / 2
-                xScale: 0.75
-                yScale: 0.75
-            },
-            Rotation {
-                origin.x: width / 2
-                origin.y: height / 2
-                angle: - 30.0
-            }
-        ]
+    color: "black"
+    width: sourceImage.width
+    height: sourceImage.height
+    ShaderEffect {
+        Image {
+            id: sourceImage
+            // width: sourceWidth
+            // height: sourceHeight
+            visible: false
+            source: "qrc:/images/Linux_old.png"
+        }
+        width: sourceImage.width
+        height: sourceImage.height
+        property variant source: sourceImage
+        fragmentShader: "
+            uniform sampler2D source;
+            uniform lowp float qt_Opacity;
+            varying highp vec2 qt_TexCoord0;
+            void main() {
+                gl_FragColor = abs( texture2D( source, qt_TexCoord0 ) * qt_Opacity - 1.0 );
+            }"
     }
+
 }
