@@ -22,7 +22,9 @@ Item {
             }
             ctx.clearRect( 0, 0, parent.width, parent.height )
             ctx.save()
-            ctx.strokeStyle = "black"
+            ctx.fillStyle = "#272933"
+            ctx.fillRect( 0, 0, parent.width, parent.height )
+            ctx.strokeStyle = "darkGray"
             ctx.lineWidth = 0.5
 
             drawFantasy();
