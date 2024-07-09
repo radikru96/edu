@@ -10,7 +10,18 @@ Rectangle{
         y: 0
         smooth: true
         source: "qrc:/images/MacOS.png"
-        scale: 0.75
-        rotation: - 30.0
+        transform: [
+            Scale {
+                origin.x: width / 2
+                origin.y: height / 2
+                xScale: 0.75
+                yScale: 0.75
+            },
+            Rotation {
+                origin.x: width / 2
+                origin.y: height / 2
+                angle: - 30.0
+            }
+        ]
     }
 }
