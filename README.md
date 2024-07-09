@@ -37,3 +37,4 @@
 + [QmlImage](../QmlImage/) 
 + [QmlBorderimage](../QmlBorderimage/) 
 + [QmlCanvas](../QmlCanvas/) 
++ [QmlCanvas_Gradient](../QmlCanvas_Gradient/) 
