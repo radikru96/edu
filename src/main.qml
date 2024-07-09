@@ -6,6 +6,7 @@ Item {
     Canvas {
         anchors.fill: parent
         onPaint: {
+            var ctx = getContext("2d");
             function drawFantasy() {
                 ctx.beginPath()
                 ctx.translate( parent.width / 2, parent.height / 2 )
@@ -19,7 +20,6 @@ Item {
                 }
                 ctx.closePath()
             }
-            var ctx = getContext("2d");
             ctx.clearRect( 0, 0, parent.width, parent.height )
             ctx.save()
             ctx.strokeStyle = "black"
