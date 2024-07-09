@@ -24,8 +24,10 @@ Item {
             ctx.save()
             ctx.fillStyle = "#272933"
             ctx.fillRect( 0, 0, parent.width, parent.height )
+            ctx.shadowColor = "#60B0F0"
+            ctx.shadowBlur = 4
             ctx.strokeStyle = "darkGray"
-            ctx.lineWidth = 0.5
+            ctx.lineWidth = 0.4
 
             drawFantasy();
 
