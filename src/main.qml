@@ -1,20 +1,34 @@
 import QtQuick
 
-Flickable {
-    id: view
-    width: 250
-    height: 250
-    contentWidth: 500
-    contentHeight: 500
+Item {
+    width: 400
+    height: 400
+    Canvas {
+        anchors.fill: parent
+        onPaint: {
+            function drawFantasy() {
+                ctx.beginPath()
+                ctx.translate( parent.width / 2, parent.height / 2 )
+                var fAngle = 91 * Math.PI / 180
+                for ( var i = 0; i < 360; ++i ) {
+                    var n = i * 2
+                    ctx.moveTo( 0, 0 )
+                    ctx.lineTo( n, 0 )
+                    ctx.translate( n, 0 )
+                    ctx.rotate( fAngle )
+                }
+                ctx.closePath()
+            }
+            var ctx = getContext("2d");
+            ctx.clearRect( 0, 0, parent.width, parent.height )
+            ctx.save()
+            ctx.strokeStyle = "black"
+            ctx.lineWidth = 1
 
-    Repeater {
-        model: [ "red", "white", "green", "yellow", "blue" ]
-        Rectangle{
-            color: modelData
-            width: view.contentWidth - index * 100
-            height: view.contentHeight - index * 100
-            x: view.contentWidth / 2 - width / 2
-            y: view.contentHeight / 2 - height / 2
+            drawFantasy();
+
+            ctx.stroke();
+            ctx.restore();
         }
     }
 }
