@@ -1,4 +1,4 @@
-QT += quick qml
+QT += quick qml gui
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -32,7 +32,9 @@ resources.files += \
     images/MacOS_old.png \
     images/OS2_old.png \
     images/Windows_old.png \
-    src/main.qml
+    src/main.qml \
+    src/shader.frag \
+    src/shader.frag.qsb
 resources.prefix = /
 
 RESOURCES = resources

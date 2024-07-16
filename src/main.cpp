@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
     QFileInfo fi( app.applicationFilePath() );
     app.setApplicationName( fi.baseName() );
     view.connect( view.engine(), SIGNAL(quit()), &app, SLOT(quit()) );
+    /*QQmlFileSelector* ps =*/ new QQmlFileSelector( view.engine(), &view );
     view.setSource( QUrl( "qrc:/src/main.qml" ) );
     view.setResizeMode( QQuickView::SizeRootObjectToView );
     view.show();
