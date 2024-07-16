@@ -38,3 +38,4 @@
 + [QmlBorderimage](../QmlBorderimage/) 
 + [QmlCanvas](../QmlCanvas/) 
 + [QmlCanvas_Gradient](../QmlCanvas_Gradient/) 
++ [QmlShaderEffect](../QmlShaderEffect/) does not work 
