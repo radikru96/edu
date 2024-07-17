@@ -21,6 +21,12 @@ Rectangle{
             else if ( event.key === Qt.Key_Up ) {
                 y -= 3;
             }
+            else if ( event.key === Qt.Key_Plus ) {
+                font.pixelSize++;
+            }
+            else if ( event.key === Qt.Key_Minus ) {
+                font.pixelSize--;
+            }
         }
         focus: true
     }
