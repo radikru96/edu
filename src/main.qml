@@ -5,6 +5,7 @@ Rectangle{
     height: 300
     color: focus ? "red" : "lightgreen"
     KeyNavigation.tab: childrect
+    focus: true
     Rectangle {
         id: childrect
         width: 150
@@ -12,7 +13,6 @@ Rectangle{
         anchors.centerIn: parent
         color: focus ? "red" : "lightgreen"
         KeyNavigation.tab: parent
-        focus: true
         Text {
             anchors.centerIn: parent
             text: "Press TAB"
