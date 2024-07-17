@@ -44,3 +44,4 @@
 + [QmlFocus_KeyNavigation](../QmlFocus_KeyNavigation/)
 + [QmlFocus_Keys.onPressed](../QmlFocus_Keys.onPressed/)
 + [QmlMultiPointTouchArea](../QmlMultiPointTouchArea/)
++ [QmlPropertyAnimation](../QmlPropertyAnimation/)
