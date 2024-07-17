@@ -1,19 +1,13 @@
 import QtQuick
 
-Rectangle {
-    width: 300
-    height: 150
-    signal mousePositionChanged( int x, int y )
-    onMousePositionChanged: txt.text = "<h1>X:" + x + "; Y:" + y + "</h1>"
-    Text {
-        id: txt
-        text: "<h1>Move the Mouse</h1>"
+Item {
+    width: 150
+    height: 100
+    Button {
         anchors.centerIn: parent
-    }
-    MouseArea {
-        anchors.fill: parent
-        hoverEnabled: true
-        onMouseXChanged: parent.mousePositionChanged( mouseX, mouseY )
-        onMouseYChanged: parent.mousePositionChanged( mouseX, mouseY )
+        text: "Please, Click me!"
+        onClicked: {
+            text = "Clicked!"
+        }
     }
 }
