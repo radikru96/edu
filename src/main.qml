@@ -1,20 +1,29 @@
 import QtQuick
-
-Flickable {
-    id: view
-    width: 250
-    height: 250
-    contentWidth: 500
-    contentHeight: 500
-
-    Repeater {
-        model: [ "red", "white", "green", "yellow", "blue" ]
-        Rectangle{
-            color: modelData
-            width: view.contentWidth - index * 100
-            height: view.contentHeight - index * 100
-            x: view.contentWidth / 2 - width / 2
-            y: view.contentHeight / 2 - height / 2
+Rectangle{
+    width: 400
+    height: 400
+    color: "black"
+    MultiPointTouchArea {
+        anchors.fill: parent
+        minimumTouchPoints: 1
+        maximumTouchPoints: 5
+        touchPoints: [
+            TouchPoint {},
+            TouchPoint {},
+            TouchPoint {},
+            TouchPoint {},
+            TouchPoint {}
+        ]
+        Repeater {
+            model: parent.touchPoints
+            Rectangle{
+                color: "white";
+                x: modelData.x;
+                y: modelData.y;
+                width: 30;
+                height: 30;
+                visible: modelData.pressed;
+            }
         }
     }
 }
