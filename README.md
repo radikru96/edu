@@ -41,3 +41,4 @@
 + [QmlShaderEffect](../QmlShaderEffect/) does not work 
 + [QmlSignal](../QmlSignal/)
 + [QmlSignalButton](../QmlSignalButton/)
++ [QmlFocus_KeyNavigation](../QmlFocus_KeyNavigation/)
