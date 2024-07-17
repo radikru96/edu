@@ -1,24 +1,19 @@
 import QtQuick
 
 Rectangle {
-    id: root
-    color: "lightgreen"
     width: 300
-    height: 300
-    Image {
-        id: img
+    height: 100
+    color: "lightgreen"
+    Rectangle {
         x: 0
         y: 0
-        source: "qrc:/images/Linux.png"
-    }
-    PropertyAnimation {
-        target: img
-        properties: "x,y"
-        from: 0
-        to: (root.width< root.height? root.width: root.height) - (img.width> img.height? img.width: img.height)
-        duration: 1500
-        running: true
-        loops: Animation.Infinite
-        easing.type: Easing.OutExpo
+        height: 100
+        color: "red"
+        NumberAnimation on width {
+            from: 300
+            to: 0
+            duration: 2000
+            easing.type: Easing.InOutCubic
+        }
     }
 }
