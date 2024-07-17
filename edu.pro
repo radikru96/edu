@@ -20,6 +20,18 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 #DISTFILES += \
 resources.files += \
+    images/Linux.jpg \
+    images/Linux.png \
+    images/MacOS.jpg \
+    images/MacOS.png \
+    images/OS2.jpg \
+    images/OS2.png \
+    images/Windows.jpg \
+    images/Linux_old.png \
+    images/Windows.png \
+    images/MacOS_old.png \
+    images/OS2_old.png \
+    images/Windows_old.png \
     src/main.qml
 resources.prefix = /
 
