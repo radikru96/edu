@@ -1,20 +1,20 @@
 import QtQuick
 
-Flickable {
-    id: view
-    width: 250
-    height: 250
-    contentWidth: 500
-    contentHeight: 500
-
-    Repeater {
-        model: [ "red", "white", "green", "yellow", "blue" ]
-        Rectangle{
-            color: modelData
-            width: view.contentWidth - index * 100
-            height: view.contentHeight - index * 100
-            x: view.contentWidth / 2 - width / 2
-            y: view.contentHeight / 2 - height / 2
+Rectangle{
+    width: 300
+    height: 300
+    color: focus ? "red" : "lightgreen"
+    KeyNavigation.tab: childrect
+    Rectangle {
+        id: childrect
+        width: 150
+        height: 150
+        anchors.centerIn: parent
+        color: focus ? "red" : "lightgreen"
+        KeyNavigation.tab: parent
+        Text {
+            anchors.centerIn: parent
+            text: "Press TAB"
         }
     }
 }
