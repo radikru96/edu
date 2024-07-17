@@ -1,6 +1,7 @@
 import QtQuick
 
 Rectangle {
+    id: root
     color: "lightgreen"
     width: 300
     height: 300
@@ -14,7 +15,7 @@ Rectangle {
         target: img
         properties: "x,y"
         from: 0
-        to: 300 - img.height
+        to: (root.width< root.height? root.width: root.height) - (img.width> img.height? img.width: img.height)
         duration: 1500
         running: true
         loops: Animation.Infinite
