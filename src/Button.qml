@@ -4,8 +4,8 @@ BorderImage {
     property alias text: txt.text
     signal clicked;
     source: "qrc:/images/Windows.png"
-    width: txt.width + 15
-    height: txt.height + 15
+    width: txt.width > txt.height ? txt.width  + 15: txt.height + 15
+    height: txt.width > txt.height ? txt.width  + 15: txt.height + 15
     border {
         left: 15; top: 12
         right: 15; bottom: 12
