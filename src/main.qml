@@ -8,10 +8,20 @@ Rectangle{
         y: 20;
         text: "Move this text<br>(use the cursor - keys)"
         horizontalAlignment: Text.AlignHCenter
-        Keys.onLeftPressed: x -= 3
-        Keys.onRightPressed: x += 3
-        Keys.onDownPressed: y += 3
-        Keys.onUpPressed: y -= 3
+        Keys.onPressed: {
+            if ( event.key === Qt.Key_Left ) {
+                x -= 3;
+            }
+            else if ( event.key === Qt.Key_Right ) {
+                x += 3;
+            }
+            else if ( event.key === Qt.Key_Down ) {
+                y += 3;
+            }
+            else if ( event.key === Qt.Key_Up ) {
+                y -= 3;
+            }
+        }
         focus: true
     }
 }
