@@ -46,3 +46,4 @@
 + [QmlMultiPointTouchArea](../QmlMultiPointTouchArea/)
 + [QmlPropertyAnimation](../QmlPropertyAnimation/)
 + [QmlNumberAnimation](../QmlNumberAnimation/)
++ [QmlColorAnimation](../QmlColorAnimation/)
