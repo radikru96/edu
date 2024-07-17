@@ -1,21 +1,17 @@
 import QtQuick
 
 Rectangle{
-    width: 300
-    height: 300
-    color: focus ? "red" : "lightgreen"
-    KeyNavigation.tab: childrect
-    focus: true
-    Rectangle {
-        id: childrect
-        width: 150
-        height: 150
-        anchors.centerIn: parent
-        color: focus ? "red" : "lightgreen"
-        KeyNavigation.tab: parent
-        Text {
-            anchors.centerIn: parent
-            text: "Press TAB"
-        }
+    width: 200
+    height: 100
+    Text {
+        x: 20;
+        y: 20;
+        text: "Move this text<br>(use the cursor - keys)"
+        horizontalAlignment: Text.AlignHCenter
+        Keys.onLeftPressed: x -= 3
+        Keys.onRightPressed: x += 3
+        Keys.onDownPressed: y += 3
+        Keys.onUpPressed: y -= 3
+        focus: true
     }
 }
