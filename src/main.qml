@@ -1,19 +1,23 @@
 import QtQuick
 
 Rectangle {
+    color: "lightgreen"
     width: 300
-    height: 150
-    signal mousePositionChanged( int x, int y )
-    onMousePositionChanged: txt.text = "<h1>X:" + x + "; Y:" + y + "</h1>"
-    Text {
-        id: txt
-        text: "<h1>Move the Mouse</h1>"
-        anchors.centerIn: parent
+    height: 300
+    Image {
+        id: img
+        x: 0
+        y: 0
+        source: "qrc:/images/Linux.png"
     }
-    MouseArea {
-        anchors.fill: parent
-        hoverEnabled: true
-        onMouseXChanged: parent.mousePositionChanged( mouseX, mouseY )
-        onMouseYChanged: parent.mousePositionChanged( mouseX, mouseY )
+    PropertyAnimation {
+        target: img
+        properties: "x,y"
+        from: 0
+        to: 300 - img.height
+        duration: 1500
+        running: true
+        loops: Animation.Infinite
+        easing.type: Easing.OutExpo
     }
 }
