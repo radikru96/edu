@@ -47,3 +47,4 @@
 + [QmlPropertyAnimation](../QmlPropertyAnimation/)
 + [QmlNumberAnimation](../QmlNumberAnimation/)
 + [QmlColorAnimation](../QmlColorAnimation/)
++ [QmlRotationAnimation](../QmlRotationAnimation/)
