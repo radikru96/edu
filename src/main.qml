@@ -1,24 +1,18 @@
 import QtQuick
 
 Rectangle {
-    id: root
-    color: "lightgreen"
-    width: 300
-    height: 300
+    width: 150
+    height: 150
     Image {
-        id: img
-        x: 0
-        y: 0
         source: "qrc:/images/Linux.png"
-    }
-    PropertyAnimation {
-        target: img
-        properties: "x,y"
-        from: 0
-        to: (root.width< root.height? root.width: root.height) - (img.width> img.height? img.width: img.height)
-        duration: 1500
-        running: true
-        loops: Animation.Infinite
-        easing.type: Easing.OutExpo
+        anchors.centerIn: parent
+        smooth: true
+        RotationAnimation on rotation {
+            from: 0
+            to: 360
+            duration: 2000
+            loops: Animation.Infinite
+            easing.type: Easing.InOutBack
+        }
     }
 }
