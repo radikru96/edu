@@ -51,3 +51,4 @@
 + [QmlBehaviorAnimation](../QmlBehaviorAnimation/)
 + [QmlParallelAnimation](../QmlParallelAnimation/)
 + [QmlSequentialAnimation](../QmlSequentialAnimation/)
++ [QmlStates](../QmlStates/)
