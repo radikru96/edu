@@ -1,31 +1,50 @@
 import QtQuick
 
 Rectangle {
-    width: 400
-    height: 400
+    width: 130
+    height: 450
     Image {
         id: img
         source: "qrc:/images/Windows.png"
         smooth: true
-        anchors.centerIn: parent
-    }
-    ParallelAnimation {
-        NumberAnimation {
-            target: img
-            properties: "scale"
-            from: 0.1;
-            to: 3.0;
-            duration: 2000
-            easing.type: Easing.InOutCubic
+        Text {
+            anchors.horizontalCenter: img.horizontalCenter
+            anchors.top: img.bottom
+            text: "Click me!"
         }
-        NumberAnimation {
-            target: img
-            properties: "opacity"
-            from: 1.0;
-            to: 0;
-            duration: 2000
+        MouseArea {
+            anchors.fill: img
+            onClicked: anim.running = true
         }
-        running: true
-        loops: Animation.Infinite
+        SequentialAnimation {
+            id: anim
+            NumberAnimation {
+                target: img
+                from: 20;
+                to: 300;
+                properties: "y"
+                easing.type: Easing.OutBounce
+                duration: 1000
+            }
+            RotationAnimation {
+                target: img
+                from: 0;
+                to: 360;
+                properties: "rotation"
+                direction: RotationAnimation.Clockwise
+                duration: 1000
+            }
+            PauseAnimation {
+                duration: 500
+            }
+            NumberAnimation {
+                target: img
+                from: 300;
+                to: 20;
+                properties: "y"
+                easing.type: Easing.OutBack
+                duration: 1000
+            }
+        }
     }
 }
