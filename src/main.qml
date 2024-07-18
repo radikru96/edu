@@ -1,20 +1,44 @@
 import QtQuick
 
-Flickable {
-    id: view
-    width: 250
-    height: 250
-    contentWidth: 500
-    contentHeight: 500
-
-    Repeater {
-        model: [ "red", "white", "green", "yellow", "blue" ]
-        Rectangle{
-            color: modelData
-            width: view.contentWidth - index * 100
-            height: view.contentHeight - index * 100
-            x: view.contentWidth / 2 - width / 2
-            y: view.contentHeight / 2 - height / 2
+Rectangle {
+    id: rect
+    width: 360
+    height: 360
+    state: "State2"
+    Text {
+        id: txt
+        anchors.centerIn: parent
+    }
+    states: [
+        State {
+            name: "State1"
+            PropertyChanges {
+                target: rect
+                color: "lightgreen"
+                width: 150
+                height: 60
+            }
+            PropertyChanges {
+                target: txt
+                text: "State2: Click Me!"
+            }
+        },
+        State {
+            name: "State2"
+            PropertyChanges {
+                target: rect
+                color: "yellow"
+                width: 200
+                height: 120
+            }
+            PropertyChanges {
+                target: txt
+                text: "State1: Click Me!"
+            }
         }
+    ]
+    MouseArea {
+        anchors.fill: parent
+        onClicked: parent.state = ( parent.state === "State1" ) ? "State2" : "State1"
     }
 }
