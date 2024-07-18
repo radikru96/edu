@@ -49,3 +49,4 @@
 + [QmlColorAnimation](../QmlColorAnimation/)
 + [QmlRotationAnimation](../QmlRotationAnimation/)
 + [QmlBehaviorAnimation](../QmlBehaviorAnimation/)
++ [QmlParallelAnimation](../QmlParallelAnimation/)
