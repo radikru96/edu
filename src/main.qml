@@ -1,37 +1,31 @@
 import QtQuick
 
 Rectangle {
-    id: rect
-    width: 360
-    height: 360
+    width: 400
+    height: 400
     Image {
         id: img
         source: "qrc:/images/Windows.png"
-        x: 10
-        y: 10
         smooth: true
-        Text {
-            anchors.verticalCenter: img.verticalCenter
-            anchors.top: img.bottom
-            text: "Move the mouse!"
-        }
-        Behavior on x {
-            NumberAnimation {
-                duration: 1000
-                easing.type: Easing.OutBounce
-            }
-        }
-        Behavior on y {
-            NumberAnimation {
-                duration: 1000
-                easing.type: Easing.OutBounce
-            }
-        }
+        anchors.centerIn: parent
     }
-    MouseArea {
-        anchors.fill: rect
-        hoverEnabled: true
-        onMouseXChanged: img.x = mouseX
-        onMouseYChanged: img.y = mouseY
+    ParallelAnimation {
+        NumberAnimation {
+            target: img
+            properties: "scale"
+            from: 0.1;
+            to: 3.0;
+            duration: 2000
+            easing.type: Easing.InOutCubic
+        }
+        NumberAnimation {
+            target: img
+            properties: "opacity"
+            from: 1.0;
+            to: 0;
+            duration: 2000
+        }
+        running: true
+        loops: Animation.Infinite
     }
 }
