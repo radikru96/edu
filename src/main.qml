@@ -1,13 +1,14 @@
 import QtQuick
 
 Rectangle {
-    width: 130
-    height: 450
+    width: img.width
+    height: 300 + img.height + txt.height
     Image {
         id: img
         source: "qrc:/images/Windows.png"
         smooth: true
         Text {
+            id: txt
             anchors.horizontalCenter: img.horizontalCenter
             anchors.top: img.bottom
             text: "Click me!"
