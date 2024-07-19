@@ -1,27 +1,27 @@
 import QtQuick
+import QtQuick.Particles
 
 Rectangle{
-    color: "aqua"
-    width: img.width
-    height: img.height
-    Image {
-        id: img
-        x: 0
-        y: 0
-        smooth: true
-        source: "qrc:/images/MacOS.png"
-        transform: [
-            Scale {
-                origin.x: width / 2
-                origin.y: height / 2
-                xScale: 0.75
-                yScale: 0.75
-            },
-            Rotation {
-                origin.x: width / 2
-                origin.y: height / 2
-                angle: - 30.0
+    width: 360
+    height: 360
+    color: "MidnightBlue"
+    ParticleSystem {
+        anchors.fill: parent
+        ImageParticle {
+            source: "qrc:/images/MacOS.png"
+        }
+        Emitter {
+            width: parent.width
+            height: parent.height
+            anchors.bottom: parent.bottom
+            lifeSpan: 10000
+            sizeVariation: 16
+            emitRate: 20
+            velocity: AngleDirection {
+                angle: 90
+                angleVariation: 10
+                magnitude: 100
             }
-        ]
+        }
     }
 }
