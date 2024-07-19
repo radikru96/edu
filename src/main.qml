@@ -35,27 +35,16 @@ Item {
                 }
             }
         ]
-        transitions: [
+        transitions:
             Transition {
-                from: "State1"
-                to: "State2"
+                from: "*"
+                to: "*"
                 PropertyAnimation {
                     target: rect
                     properties: "x,y"
                     easing.type: Easing.InCirc
                     duration: 1000
                 }
-            },
-            Transition {
-                from: "State2"
-                to: "State1"
-                PropertyAnimation {
-                    target: rect
-                    properties: "x,y"
-                    easing.type: Easing.InBounce
-                    duration: 1000
-                }
             }
-        ]
     }
 }
