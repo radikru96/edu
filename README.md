@@ -53,3 +53,4 @@
 + [QmlSequentialAnimation](../QmlSequentialAnimation/)
 + [QmlStates](../QmlStates/)
 + [QmlStatesTransitions](../QmlStatesTransitions/)
++ [QmlParticles](../QmlParticles/)
