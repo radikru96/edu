@@ -1,44 +1,61 @@
 import QtQuick
 
-Rectangle {
-    id: rect
+Item {
     width: 360
     height: 360
-    state: "State2"
-    Text {
-        id: txt
-        anchors.centerIn: parent
-    }
-    states: [
-        State {
-            name: "State1"
-            PropertyChanges {
-                target: rect
-                color: "lightgreen"
-                width: 150
-                height: 60
-            }
-            PropertyChanges {
-                target: txt
-                text: "State2: Click Me!"
-            }
-        },
-        State {
-            name: "State2"
-            PropertyChanges {
-                target: rect
-                color: "yellow"
-                width: 200
-                height: 120
-            }
-            PropertyChanges {
-                target: txt
-                text: "State1: Click Me!"
-            }
+    Rectangle {
+        id: rect
+        width: 100
+        height: 100
+        color: "magenta"
+        state: "State1"
+        Text {
+            anchors.centerIn: parent
+            text: "Click Me!"
         }
-    ]
-    MouseArea {
-        anchors.fill: parent
-        onClicked: parent.state = ( parent.state === "State1" ) ? "State2" : "State1"
+        MouseArea {
+            anchors.fill: rect
+            onClicked: rect.state = ( rect.state === "State1" ) ? "State2" : "State1"
+        }
+        states: [
+            State {
+                name: "State1"
+                PropertyChanges {
+                    target: rect
+                    x: 0
+                    y: 0
+                }
+            },
+            State {
+                name: "State2"
+                PropertyChanges {
+                    target: rect
+                    x: 200
+                    y: 200
+                }
+            }
+        ]
+        transitions: [
+            Transition {
+                from: "State1"
+                to: "State2"
+                PropertyAnimation {
+                    target: rect
+                    properties: "x,y"
+                    easing.type: Easing.InCirc
+                    duration: 1000
+                }
+            },
+            Transition {
+                from: "State2"
+                to: "State1"
+                PropertyAnimation {
+                    target: rect
+                    properties: "x,y"
+                    easing.type: Easing.InBounce
+                    duration: 1000
+                }
+            }
+        ]
     }
 }
