@@ -57,3 +57,4 @@
 + [QmlListModel](../QmlListModel/)
 + [QmlXmlListModel](../QmlXmlListModel/)
 + [QmlJsonListModel](../QmlJsonListModel/)
++ [QmlGridView](../QmlGridView/)
