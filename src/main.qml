@@ -3,44 +3,44 @@ import QtQuick
 Rectangle{
     id: mainrect
     color:  "gray"
-    width: 200
-    height: 360
+    width: 380
+    height: 420
     Component {
         id: delegate
         Item {
-            width: mainrect.width
-            height: 70
-            Row {
-                anchors.verticalCenter: parent.verticalCenter
+            width: 120
+            height: 120
+            Column {
+                anchors.centerIn: parent
                 Image {
+                    anchors.horizontalCenter: parent.horizontalCenter
                     width: 64
                     height: 64
                     source: cover
                     smooth: true
                 }
-                Column {
-                    Text {color: "white"
-                        text: artist
-                        font.pointSize: 12
-                    }
-                    Text {color: "lightblue"
-                        text: album
-                        font.pointSize: 10
-                    }
-                    Text {color: "lightGray"
-                        text: year
-                        font.pointSize: 8
-                    }
+                Text {color: "white"
+                    text: artist
+                    font.pointSize: 12
+                }
+                Text {color: "lightblue"
+                    text: album
+                    font.pointSize: 10
+                }
+                Text {color: "lightGray"
+                    text: year
+                    font.pointSize: 8
                 }
             }
         }
     }
-    ListView {
+    GridView {
+        cellHeight: 120
+        cellWidth: 120
         focus:  true
         highlight: Rectangle {
             width: parent.width
             gradient: Gradient {
-                orientation: Gradient.Horizontal
                 GradientStop {
                     position: 0.50;
                     color: mainrect.color;
