@@ -1,76 +1,23 @@
 import QtQuick
+import QtQml.XmlListModel
 
-ListModel {
-    ListElement {
-        artist: "Windows"
-        album: "Old"
-        year: "2024"
-        cover: "qrc:/images/Windows_old.png"
+XmlListModel {
+    source: "qrc:/src/CDs.xml"
+    query: "/CDs/CD"
+    XmlListModelRole {
+        name: "artist";
+        elementName: "artist"
     }
-    ListElement {
-        artist: "Linux"
-        album: "Old"
-        year: "2024"
-        cover: "qrc:/images/Linux_old.png"
+    XmlListModelRole {
+        name: "album";
+        elementName: "album"
     }
-    ListElement {
-        artist: "MacOS"
-        album: "Old"
-        year: "2024"
-        cover: "qrc:/images/MacOS_old.png"
+    XmlListModelRole {
+        name: "year";
+        elementName: "year"
     }
-    ListElement {
-        artist: "OS2"
-        album: "Old"
-        year: "2024"
-        cover: "qrc:/images/OS2_old.png"
-    }
-    ListElement {
-        artist: "Windows"
-        album: "modern"
-        year: "2024"
-        cover: "qrc:/images/Windows.png"
-    }
-    ListElement {
-        artist: "Linux"
-        album: "modern"
-        year: "2024"
-        cover: "qrc:/images/Linux.png"
-    }
-    ListElement {
-        artist: "MacOS"
-        album: "modern"
-        year: "2024"
-        cover: "qrc:/images/MacOS.png"
-    }
-    ListElement {
-        artist: "OS2"
-        album: "modern"
-        year: "2024"
-        cover: "qrc:/images/OS2.png"
-    }
-    ListElement {
-        artist: "Windows"
-        album: "jpg"
-        year: "2024"
-        cover: "qrc:/images/Windows.jpg"
-    }
-    ListElement {
-        artist: "Linux"
-        album: "jpg"
-        year: "2024"
-        cover: "qrc:/images/Linux.jpg"
-    }
-    ListElement {
-        artist: "MacOS"
-        album: "jpg"
-        year: "2024"
-        cover: "qrc:/images/MacOS.jpg"
-    }
-    ListElement {
-        artist: "OS2"
-        album: "jpg"
-        year: "2024"
-        cover: "qrc:/images/OS2.jpg"
+    XmlListModelRole {
+        name: "cover";
+        elementName: "cover"
     }
 }
