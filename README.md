@@ -56,3 +56,4 @@
 + [QmlParticles](../QmlParticles/)
 + [QmlListModel](../QmlListModel/)
 + [QmlXmlListModel](../QmlXmlListModel/)
++ [QmlJsonListModel](../QmlJsonListModel/)
