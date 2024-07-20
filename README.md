@@ -55,3 +55,4 @@
 + [QmlStatesTransitions](../QmlStatesTransitions/)
 + [QmlParticles](../QmlParticles/)
 + [QmlListModel](../QmlListModel/)
++ [QmlXmlListModel](../QmlXmlListModel/)
