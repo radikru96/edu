@@ -1,20 +1,22 @@
 import QtQuick
 
 Rectangle{
-    id: mainrect
     color:  "gray"
-    width: 450
-    height: 170
+    width: 370
+    height: 250
     Component {
         id: delegate
         Item {
             width: item.width
             height: item.height
+            visible: PathView.onPath
+            scale: PathView.iconScale
+            opacity: PathView.iconOpacity
             Column {
                 id: item
                 Image {
-                    width: 64
-                    height: 64
+                    width: 90
+                    height: 90
                     source: cover
                     smooth: true
                 }
@@ -35,11 +37,35 @@ Rectangle{
     }
     Path {
         id: itemsPath
-        startX: 0
-        startY: 80
-        PathLine {
-            x: 500
-            y: 80
+        startX: 150
+        startY: 150
+        PathAttribute {
+            name: "iconScale";
+            value: 1.0
+        }
+        PathAttribute {
+            name: "iconOpacity";
+            value: 1.0
+        }
+        PathQuad {
+            x: 150;
+            y: 25;
+            controlX: 460;
+            controlY: 75
+        }
+        PathAttribute {
+            name: "iconScale";
+            value: 0.3
+        }
+        PathAttribute {
+            name: "iconOpacity";
+            value: 0.3
+        }
+        PathQuad {
+            x: 150;
+            y: 150;
+            controlX: -80;
+            controlY: 75
         }
     }
     PathView {
@@ -48,7 +74,6 @@ Rectangle{
         model: CDs{}
         delegate: delegate
         path: itemsPath
-        pathItemCount: 4
     }
 }
 
