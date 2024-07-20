@@ -1,27 +1,45 @@
 import QtQuick
 
 Rectangle{
-    color: "aqua"
-    width: img.width
-    height: img.height
-    Image {
-        id: img
-        x: 0
-        y: 0
-        smooth: true
-        source: "qrc:/images/MacOS.png"
-        transform: [
-            Scale {
-                origin.x: width / 2
-                origin.y: height / 2
-                xScale: 0.75
-                yScale: 0.75
-            },
-            Rotation {
-                origin.x: width / 2
-                origin.y: height / 2
-                angle: - 30.0
+    id: mainrect
+    color:  "gray"
+    width: 200
+    height: 360
+    Component {
+        id: delegate
+        Item {
+            width: mainrect.width
+            height: 70
+            Row {
+                anchors.verticalCenter: parent.verticalCenter
+                Image {
+                    width: 64
+                    height: 64
+                    source: cover
+                    smooth: true
+                }
+                Column {
+                    Text {color: "white"
+                        text: artist
+                        font.pointSize: 12
+                    }
+                    Text {color: "lightblue"
+                        text: album
+                        font.pointSize: 10
+                    }
+                    Text {color: "yellow"
+                        text: year
+                        font.pointSize: 8
+                    }
+                }
             }
-        ]
+        }
+    }
+    ListView {
+        focus:  true
+        anchors.fill: parent
+        model: CDs{}
+        delegate: delegate
     }
 }
+
