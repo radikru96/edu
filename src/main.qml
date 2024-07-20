@@ -27,7 +27,7 @@ Rectangle{
                         text: album
                         font.pointSize: 10
                     }
-                    Text {color: "yellow"
+                    Text {color: "lightGray"
                         text: year
                         font.pointSize: 8
                     }
@@ -37,6 +37,21 @@ Rectangle{
     }
     ListView {
         focus:  true
+        highlight: Rectangle {
+            width: parent.width
+            gradient: Gradient{
+                orientation: Gradient.Horizontal
+                GradientStop {
+                    position: 0.50;
+                    color: mainrect.color;
+                }
+                GradientStop {
+                    position: 1.00;
+                    color: "darkGray";
+                }
+            }
+        }
+
         anchors.fill: parent
         model: CDs{}
         delegate: delegate
