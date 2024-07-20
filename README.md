@@ -59,3 +59,4 @@
 + [QmlJsonListModel](../QmlJsonListModel/)
 + [QmlGridView](../QmlGridView/)
 + [QmlPathView](../QmlPathView/)
++ [QmlPathViewPathQuad](../QmlPathViewPathQuad/)
