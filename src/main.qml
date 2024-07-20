@@ -38,7 +38,21 @@ Rectangle{
     Path {
         id: itemsPath
         startX: 150
-        startY: 150
+        startY: 25
+        PathAttribute {
+            name: "iconScale";
+            value: 0.1
+        }
+        PathAttribute {
+            name: "iconOpacity";
+            value: 0.1
+        }
+        PathQuad {
+            x: 150;
+            y: 150;
+            controlX: 460;
+            controlY: 75
+        }
         PathAttribute {
             name: "iconScale";
             value: 1.0
@@ -50,20 +64,6 @@ Rectangle{
         PathQuad {
             x: 150;
             y: 25;
-            controlX: 460;
-            controlY: 75
-        }
-        PathAttribute {
-            name: "iconScale";
-            value: 0.3
-        }
-        PathAttribute {
-            name: "iconOpacity";
-            value: 0.3
-        }
-        PathQuad {
-            x: 150;
-            y: 150;
             controlX: -80;
             controlY: 75
         }
@@ -74,6 +74,7 @@ Rectangle{
         model: CDs{}
         delegate: delegate
         path: itemsPath
+        pathItemCount: 4
     }
 }
 
