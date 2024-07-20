@@ -33,7 +33,7 @@ resources.files += \
     images/OS2_old.png \
     images/Windows_old.png \
     src/main.qml \
-    src/CDs.qml
+    src/CDs.js
 resources.prefix = /
 
 RESOURCES = resources

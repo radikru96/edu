@@ -1,4 +1,5 @@
 import QtQuick
+import "qrc:/src/CDs.js" as CDs
 
 Rectangle{
     id: mainrect
@@ -15,20 +16,20 @@ Rectangle{
                 Image {
                     width: 64
                     height: 64
-                    source: cover
+                    source: modelData.cover
                     smooth: true
                 }
                 Column {
                     Text {color: "white"
-                        text: artist
+                        text: modelData.artist
                         font.pointSize: 12
                     }
                     Text {color: "lightblue"
-                        text: album
+                        text: modelData.album
                         font.pointSize: 10
                     }
                     Text {color: "yellow"
-                        text: year
+                        text: modelData.year
                         font.pointSize: 8
                     }
                 }
@@ -38,7 +39,7 @@ Rectangle{
     ListView {
         focus:  true
         anchors.fill: parent
-        model: CDs{}
+        model: CDs.jsonModel
         delegate: delegate
     }
 }
