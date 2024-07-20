@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<CDs>
+<CD>
+    <artist> Windows</artist>
+    <album> Old</album>
+    <year> 2024</year>
+    <cover> qrc:/images/Windows_old.png</cover>
+</CD>
+<CD>
+    <artist> Linux</artist>
+    <album> Old</album>
+    <year> 2024</year>
+    <cover> qrc:/images/Linux_old.png</cover>
+</CD>
+<CD>
+    <artist> MacOS</artist>
+    <album> Old</album>
+    <year> 2024</year>
+    <cover> qrc:/images/MacOS_old.png</cover>
+</CD>
+<CD>
+    <artist> OS2</artist>
+    <album> Old</album>
+    <year> 2024</year>
+    <cover> qrc:/images/OS2_old.png</cover>
+</CD>
+<CD>
+    <artist> Windows</artist>
+    <album> modern</album>
+    <year> 2024</year>
+    <cover> qrc:/images/Windows.png</cover>
+</CD>
+<CD>
+    <artist> Linux</artist>
+    <album> modern</album>
+    <year> 2024</year>
+    <cover> qrc:/images/Linux.png</cover>
+</CD>
+<CD>
+    <artist> MacOS</artist>
+    <album> modern</album>
+    <year> 2024</year>
+    <cover> qrc:/images/MacOS.png</cover>
+</CD>
+<CD>
+    <artist> OS2</artist>
+    <album> modern</album>
+    <year> 2024</year>
+    <cover> qrc:/images/OS2.png</cover>
+</CD>
+<CD>
+    <artist> Windows</artist>
+    <album> jpg</album>
+    <year> 2024</year>
+    <cover> qrc:/images/Windows.jpg</cover>
+</CD>
+<CD>
+    <artist> Linux</artist>
+    <album> jpg</album>
+    <year> 2024</year>
+    <cover> qrc:/images/Linux.jpg</cover>
+</CD>
+<CD>
+    <artist> MacOS</artist>
+    <album> jpg</album>
+    <year> 2024</year>
+    <cover> qrc:/images/MacOS.jpg</cover>
+</CD>
+<CD>
+    <artist> OS2</artist>
+    <album> jpg</album>
+    <year> 2024</year>
+    <cover> qrc:/images/OS2.jpg</cover>
+</CD>
+</CDs>
