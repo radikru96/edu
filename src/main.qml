@@ -39,7 +39,7 @@ Rectangle{
         focus:  true
         highlight: Rectangle {
             width: parent.width
-            gradient: Gradient{
+            gradient: Gradient {
                 orientation: Gradient.Horizontal
                 GradientStop {
                     position: 0.50;
@@ -51,7 +51,6 @@ Rectangle{
                 }
             }
         }
-
         anchors.fill: parent
         model: CDs{}
         delegate: delegate
