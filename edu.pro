@@ -11,7 +11,8 @@ TARGET = $$branch_name
 VPATH += ./src
 SOURCES += main.cpp \
 
-HEADERS +=
+HEADERS += \
+    myconnections.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
