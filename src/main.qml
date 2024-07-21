@@ -1,41 +1,24 @@
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Window
 
-ApplicationWindow {
+Window {
+    visible: true
     width: buttons.width
     height: buttons.height
-    visible: true
-    title: "Buttons"
-
     Column {
-        id: buttons
-        CheckBox {
-            text: "Check Box"
-        }
-        DelayButton {
-            text: "Delay Button"
-        }
-        RadioButton {
-            text: "Radio Button1"
-        }
-        RadioButton {
-            text: "Radio Button2"
-        }
-        RoundButton {
-            text: "Round Button"
-        }
-        Switch {
-            text: "Switch"
-        }
-        ToolButton {
-            text: "Tool Button"
-        }
-        RadioButton {
-            text: "Radio Button3"
+        anchors.centerIn: parent
+        Button {
+            signal infoClicked( string str )
+            objectName: "InfoButton"
+            text: "Info"
+            onClicked: infoClicked( "Information")
         }
         Button {
+            signal quitClicked( string str )
+            objectName: "QuitButton"
             text: "Quit"
-            onClicked: Qt.quit()
+            onClicked: quitClicked()
         }
     }
 }
