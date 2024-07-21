@@ -4,8 +4,8 @@ import QtQuick.Window
 
 Window {
     visible: true
-    width: buttons.width
-    height: buttons.height
+    width: 150
+    height: 150
     Column {
         anchors.centerIn: parent
         Button {
@@ -15,7 +15,7 @@ Window {
             onClicked: infoClicked( "Information")
         }
         Button {
-            signal quitClicked( string str )
+            signal quitClicked()
             objectName: "QuitButton"
             text: "Quit"
             onClicked: quitClicked()
