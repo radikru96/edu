@@ -1,4 +1,4 @@
-QT += quick qml
+QT += quick qml widgets quickwidgets
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -10,8 +10,10 @@ TARGET = $$branch_name
 
 VPATH += ./src
 SOURCES += main.cpp \
+    mywidget.cpp
 
-HEADERS +=
+HEADERS += \
+    mywidget.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
