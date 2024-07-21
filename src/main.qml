@@ -1,20 +1,16 @@
 import QtQuick
 
-Flickable {
-    id: view
-    width: 250
-    height: 250
-    contentWidth: 500
-    contentHeight: 500
-
-    Repeater {
-        model: [ "red", "white", "green", "yellow", "blue" ]
-        Rectangle{
-            color: modelData
-            width: view.contentWidth - index * 100
-            height: view.contentHeight - index * 100
-            x: view.contentWidth / 2 - width / 2
-            y: view.contentHeight / 2 - height / 2
+Rectangle {
+    color: "lightGreen"
+    width: 100
+    height: 100
+    Text {
+        objectName: "text"
+        anchors.centerIn: parent
+        text: "Hello Qml"
+        function setFontSize( newSize ) {
+            font.pixelSize = newSize
+            return font.family + " Size = " + newSize
         }
     }
 }
