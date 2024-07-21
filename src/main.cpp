@@ -15,6 +15,6 @@ int main(int argc, char *argv[])
         QObject::connect( pcmdQuitButton, SIGNAL(quitClicked()), &mc, SLOT(slotQuit()) );
     QObject *pcmdInfoButton = pobj->findChild<QObject *>( "InfoButton" );
     if ( pcmdInfoButton )
-        QObject::connect( pcmdInfoButton, SIGNAL(infoClicked()), &mc, SLOT(slotInfo(QString)) );
+        QObject::connect( pcmdInfoButton, SIGNAL(infoClicked(QString)), &mc, SLOT(slotInfo(QString)) );
     return app.exec();
 }
