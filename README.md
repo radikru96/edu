@@ -60,3 +60,4 @@
 + [QmlGridView](../QmlGridView/)
 + [QmlPathView](../QmlPathView/)
 + [QmlPathViewPathQuad](../QmlPathViewPathQuad/)
++ [QQuickWidget](../QQuickWidget/)
