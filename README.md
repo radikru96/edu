@@ -62,3 +62,4 @@
 + [QmlPathViewPathQuad](../QmlPathViewPathQuad/)
 + [QQuickWidget](../QQuickWidget/)
 + [QmlCppConnect](../QmlCppConnect/)
++ [QmlSetContextProperty](../QmlSetContextProperty/)
