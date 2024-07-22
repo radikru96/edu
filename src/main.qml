@@ -1,41 +1,36 @@
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Layouts
+import com.myinc.Calculation 1.0
 
 ApplicationWindow {
-    width: buttons.width
-    height: buttons.height
+    title: "Factorial Calculation"
+    width: 250
+    height: 80
     visible: true
-    title: "Buttons"
 
-    Column {
-        id: buttons
-        CheckBox {
-            text: "Check Box"
+    Calculation {
+        id: calc
+    }
+
+    ColumnLayout {
+        RowLayout {
+            SpinBox {
+                id: sbx
+                value: 0
+            }
+            Text {
+                text: "Result:" + calc.factorial(sbx.value)
+            }
         }
-        DelayButton {
-            text: "Delay Button"
-        }
-        RadioButton {
-            text: "Radio Button1"
-        }
-        RadioButton {
-            text: "Radio Button2"
-        }
-        RoundButton {
-            text: "Round Button"
-        }
-        Switch {
-            text: "Switch"
-        }
-        ToolButton {
-            text: "Tool Button"
-        }
-        RadioButton {
-            text: "Radio Button3"
-        }
-        Button {
-            text: "Quit"
-            onClicked: Qt.quit()
+        RowLayout {
+            SpinBox {
+                value: 0
+                onValueChanged: calc.input = value
+            }
+            Text {
+                text: "Result:" + calc.result
+            }
         }
     }
 }
