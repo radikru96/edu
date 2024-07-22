@@ -8,6 +8,8 @@ class MyWidget : public QWidget
     Q_OBJECT
 public:
     MyWidget(QWidget *parent = nullptr);
+public slots:
+    void slotDisplayDialog();
 };
 
 #endif // MYWIDGET_H
