@@ -10,8 +10,10 @@ TARGET = $$branch_name
 
 VPATH += ./src
 SOURCES += main.cpp \
+    src/calculation.cpp
 
-HEADERS +=
+HEADERS += \
+    src/calculation.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
