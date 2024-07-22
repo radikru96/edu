@@ -63,3 +63,4 @@
 + [QQuickWidget](../QQuickWidget/)
 + [QmlCppConnect](../QmlCppConnect/)
 + [QmlSetContextProperty](../QmlSetContextProperty/)
++ [Q_PROPERTYnQ_INVOKABLE](../Q_PROPERTYnQ_INVOKABLE/)
