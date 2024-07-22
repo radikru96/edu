@@ -1,16 +1,25 @@
 import QtQuick
 
 Rectangle {
-    color: "lightGreen"
-    width: 100
-    height: 100
+    color: myColor
+    width: 200
+    height: 200
     Text {
-        objectName: "text"
         anchors.centerIn: parent
-        text: "Hello Qml"
-        function setFontSize( newSize ) {
-            font.pixelSize = newSize
-            return font.family + " Size = " + newSize
+        text: myText
+    }
+    ListView {
+        anchors.fill: parent
+        model: myModel
+        delegate: Text {
+            text: model.display
+        }
+    }
+    MouseArea {
+        anchors.fill: parent
+        onClicked: {
+            myWidget.setWindowTitle( "Hello from Qml!" );
+            myWidget.slotDisplayDialog();
         }
     }
 }

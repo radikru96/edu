@@ -1,4 +1,3 @@
-// #include <QVBoxLayout>
 #include <QtWidgets>
 #include <QQuickWidget>
 #include <QQmlContext>
@@ -19,7 +18,7 @@ MyWidget::MyWidget(QWidget *parent) : QWidget{parent}
     pModel->setStringList(lst);
     pContext->setContextProperty( "myModel", pModel );
     pContext->setContextProperty( "myText", "It's my text" );
-    pContext->setContextProperty( "myColor", QColor( Qt::yellow );
+    pContext->setContextProperty( "myColor", QColor( Qt::yellow ) );
     pContext->setContextProperty( "myWidget", this );
 }
 
