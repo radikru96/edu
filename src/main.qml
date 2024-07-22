@@ -6,31 +6,21 @@ import com.myinc.Calculation 1.0
 ApplicationWindow {
     title: "Factorial Calculation"
     width: 250
-    height: 80
+    height: 40
     visible: true
 
     Calculation {
-        id: calc
+        input: sbx.value
+        onResultValueChanged: txt.text = "Result:" + result
     }
 
-    ColumnLayout {
-        RowLayout {
-            SpinBox {
-                id: sbx
-                value: 0
-            }
-            Text {
-                text: "Result:" + calc.factorial(sbx.value)
-            }
+    RowLayout {
+        SpinBox {
+            id: sbx
+            value: 0
         }
-        RowLayout {
-            SpinBox {
-                value: 0
-                onValueChanged: calc.input = value
-            }
-            Text {
-                text: "Result:" + calc.result
-            }
+        Text {
+            id: txt
         }
     }
 }
