@@ -1,6 +1,7 @@
 #include <QtWidgets>
 #include <QQuickWidget>
 #include <QQmlContext>
+#include <QQuickItem>
 #include "mywidget.h"
 
 MyWidget::MyWidget(QWidget *parent) : QWidget{parent}
@@ -18,8 +19,9 @@ MyWidget::MyWidget(QWidget *parent) : QWidget{parent}
     pModel->setStringList(lst);
     pContext->setContextProperty( "myModel", pModel );
     pContext->setContextProperty( "myText", "It's my text" );
-    pContext->setContextProperty( "myColor", QColor( Qt::yellow ) );
     pContext->setContextProperty( "myWidget", this );
+    QQuickItem *pqiRoot = pv->rootObject();
+    pqiRoot->setProperty( "color", QColor( Qt::gray ) );
 }
 
 void MyWidget::slotDisplayDialog()
