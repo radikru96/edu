@@ -2,7 +2,7 @@
 #include <QPainter>
 
 Ellipse::Ellipse(QQuickItem *parent)
-    : QObject{parent}, m_color(Qt::black) {}
+    : QQuickPaintedItem{parent}, m_color(Qt::black) {}
 
 void Ellipse::paint(QPainter *ppainter)
 {
@@ -12,12 +12,12 @@ void Ellipse::paint(QPainter *ppainter)
     ppainter->drawEllipse( boundingRect() );
 }
 
-QColor Ellipse::inputValue() const
+QColor Ellipse::colorValue() const
 {
     return m_color;
 }
 
-void Ellipse::setInputValue(const QColor &col)
+void Ellipse::setColorValue(const QColor &col)
 {
     m_color = col;
 }
