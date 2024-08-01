@@ -1,26 +1,16 @@
 import QtQuick
 import QtQuick.Controls
-import QtQuick.Layouts
-import com.myinc.Calculation 1.0
+import QtQuick.Window
+import com.myinc.Ellipse 1.0
 
-ApplicationWindow {
-    title: "Factorial Calculation"
-    width: 250
-    height: 40
+Window {
+    title: "PaintElement"
     visible: true
+    width: 200
+    height: 100
 
-    Calculation {
-        input: sbx.value
-        onResultValueChanged: txt.text = "Result:" + result
-    }
-
-    RowLayout {
-        SpinBox {
-            id: sbx
-            value: 0
-        }
-        Text {
-            id: txt
-        }
+    Ellipse {
+        anchors.fill: parent
+        color: "blue"
     }
 }
