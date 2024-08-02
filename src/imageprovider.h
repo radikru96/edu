@@ -5,8 +5,7 @@
 #include <QObject>
 #include <QQuickImageProvider>
 
-class ImageProvider
- : public QQuickImageProvider
+class ImageProvider : public QQuickImageProvider
 {
 private:
     QImage brightness( const QImage *imgOrig, int n );
