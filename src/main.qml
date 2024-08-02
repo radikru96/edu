@@ -2,6 +2,7 @@ import QtQuick
 import QtQuick.Controls
 
 ApplicationWindow {
+    id: wnd
     title: "Image Brightness"
     width: controls.width
     height: controls.height
@@ -10,7 +11,10 @@ ApplicationWindow {
         id: controls
         Image {
             id: img
-            source: "image://brightness/MacOS.png;" + sld.brightnessValue
+            source: "image://brightness/Linux_old.png;" + sld.brightnessValue
+            width: wnd.width
+            height: wnd.height - sld.height - txt.height
+            fillMode: Image.PreserveAspectFit
         }
         Slider {
             id: sld
@@ -20,6 +24,7 @@ ApplicationWindow {
             property int brightnessValue: (value * 255 - 127)
         }
         Text {
+            id: txt
             width: img.width
             text: "<h1>Brightness:" + sld.brightnessValue + "</h1>"
         }
