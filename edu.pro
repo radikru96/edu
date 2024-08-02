@@ -24,7 +24,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 #DISTFILES += \
 resources.files += \
-    src/main.qml
+    src/main.qml \
     images/Linux.jpg \
     images/Linux.png \
     images/MacOS.jpg \
