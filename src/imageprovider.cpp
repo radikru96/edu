@@ -1,4 +1,4 @@
-#include "ellipse.h"
+#include "imageprovider.h"
 #include <QPainter>
 
 Ellipse::Ellipse(QQuickItem *parent)

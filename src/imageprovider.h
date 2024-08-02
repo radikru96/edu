@@ -1,5 +1,5 @@
-#ifndef ELLIPSE_H
-#define ELLIPSE_H
+#ifndef IMAGEPROVIDER_H
+#define IMAGEPROVIDER_H
 
 #include <QQuickPaintedItem>
 
@@ -16,4 +16,4 @@ public:
     void setColorValue( const QColor & );
 };
 
-#endif // ELLIPSE_H
+#endif // IMAGEPROVIDER_H

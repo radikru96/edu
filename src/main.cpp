@@ -1,6 +1,6 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-#include "ellipse.h"
+#include "imageprovider.h"
 
 int main(int argc, char *argv[])
 {
