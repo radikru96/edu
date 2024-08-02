@@ -1,21 +1,18 @@
 #ifndef IMAGEPROVIDER_H
 #define IMAGEPROVIDER_H
 
-#include <QQuickPaintedItem>
+#include <QImage>
+#include <QObject>
+#include <QQuickImageProvider>
 
 class ImageProvider
- : public QQuickPaintedItem
+ : public QQuickImageProvider
 {
-    Q_OBJECT
 private:
-    Q_PROPERTY( QColor color WRITE setColorValue READ colorValue )
-    QColor m_color;
+    QImage brightness( const QImage *imgOrig, int n );
 public:
-    ImageProvider
-( QQuickItem *parent = nullptr );
-    void paint( QPainter *ppainter);
-    QColor colorValue() const;
-    void setColorValue( const QColor & );
+    ImageProvider();
+    QImage requestImage( const QString &, QSize *, const QSize & );
 };
 
 #endif // IMAGEPROVIDER_H
