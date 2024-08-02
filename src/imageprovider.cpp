@@ -1,10 +1,13 @@
 #include "imageprovider.h"
 #include <QPainter>
 
-Ellipse::Ellipse(QQuickItem *parent)
+ImageProvider
+    ::ImageProvider
+    (QQuickItem *parent)
     : QQuickPaintedItem{parent}, m_color(Qt::black) {}
 
-void Ellipse::paint(QPainter *ppainter)
+void ImageProvider
+    ::paint(QPainter *ppainter)
 {
     ppainter->setRenderHint( QPainter::Antialiasing, true );
     ppainter->setBrush( QBrush( colorValue()) );
@@ -12,12 +15,14 @@ void Ellipse::paint(QPainter *ppainter)
     ppainter->drawEllipse( boundingRect() );
 }
 
-QColor Ellipse::colorValue() const
+QColor ImageProvider
+    ::colorValue() const
 {
     return m_color;
 }
 
-void Ellipse::setColorValue(const QColor &col)
+void ImageProvider
+    ::setColorValue(const QColor &col)
 {
     m_color = col;
 }
