@@ -1,7 +1,7 @@
 #include "imageprovider.h"
 
-QImage ImageProvider::brightness(const QImage *imgOrig, int n) {
-    QImage imgTemp = imgOrig;
+QImage ImageProvider::brightness(const QImage &imgOrig, int n) {
+    QImage imgTemp = imgOrig.convertToFormat( QImage::Format_ARGB32 );
     qint32 nHeight = imgTemp.height();
     qint32 nWidth = imgTemp.width();
     for ( qint32 y = 0; y < nHeight; ++y ) {
@@ -26,7 +26,7 @@ QImage ImageProvider::requestImage(const QString &strId, QSize *ps, const QSize 
     QStringList lst = strId.split(";");
     bool bOk = false;
     int nBrightness = lst.last().toInt(&bOk);
-    QImage img = brightness( QImage( "qrc:/" +, lst.first() ), nBrightness );
+    QImage img = brightness( QImage( ":/images/" + lst.first() ), nBrightness );
     if (ps)
         *ps = img.size();
     return img;
