@@ -1,16 +1,27 @@
 import QtQuick
 import QtQuick.Controls
-import QtQuick.Window
-import com.myinc.Ellipse 1.0
 
-Window {
-    title: "PaintElement"
+ApplicationWindow {
+    title: "Image Brightness"
+    width: controls.width
+    height: controls.height
     visible: true
-    width: 200
-    height: 100
-
-    Ellipse {
-        anchors.fill: parent
-        color: "blue"
+    Column {
+        id: controls
+        Image {
+            id: img
+            source: "image://brightness/MacOS.png;" + sld.brightnessValue
+        }
+        Slider {
+            id: sld
+            width: img.width
+            value: 0.75
+            stepSize: 0.01
+            property int brightnessValue: (value * 255 - 127)
+        }
+        Text {
+            width: img.width
+            text: "<h1>Brightness:" + sld.brightnessValue + "</h1>"
+        }
     }
 }
