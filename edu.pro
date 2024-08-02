@@ -1,4 +1,4 @@
-QT += core widgets
+QT += qml quick
 
 CONFIG += qt object warn_on debug_and_release
 
@@ -12,8 +12,10 @@ TARGET = $$branch_name
 
 VPATH += ./src
 SOURCES += main.cpp \
+    src/ellipse.cpp
 
-HEADERS +=
+HEADERS += \
+    src/ellipse.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -22,6 +24,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 #DISTFILES += \
 resources.files += \
+    src/main.qml
     images/Linux.jpg \
     images/Linux.png \
     images/MacOS.jpg \

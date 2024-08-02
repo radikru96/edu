@@ -1,10 +1,12 @@
-#include <QtWidgets>
-#include <QApplication>
+#include <QGuiApplication>
+#include <QQmlApplicationEngine>
+#include "ellipse.h"
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    QWidget wgt;
-    wgt.show();
-    return a.exec();
+    QGuiApplication app(argc, argv);
+    qmlRegisterType<Ellipse>( "com.myinc.Ellipse", 1, 0, "Ellipse" );
+    QQmlApplicationEngine engine;
+    engine.load( QUrl( "qrc:/src/main.qml" ) );
+    return app.exec();
 }
