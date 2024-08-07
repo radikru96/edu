@@ -20,7 +20,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 #DISTFILES += \
 resources.files += \
-    src/main.qml
+    src/main.qml \
+    src/pyramid.obj
 resources.prefix = /
 
 RESOURCES = resources
