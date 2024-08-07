@@ -66,3 +66,4 @@
 + [Q_PROPERTYnQ_INVOKABLE](../Q_PROPERTYnQ_INVOKABLE/)
 + [QQuickPaintedItem](../QQuickPaintedItem/)
 + [QQuickImageProvider](../QQuickImageProvider/)
++ [QtQuick.Scene3D](../QtQuick.Scene3D/)
