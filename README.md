@@ -67,3 +67,4 @@
 + [QQuickPaintedItem](../QQuickPaintedItem/)
 + [QQuickImageProvider](../QQuickImageProvider/)
 + [QtQuick.Scene3D](../QtQuick.Scene3D/)
++ [QtQuick.Scene3D.Animation](../QtQuick.Scene3D.Animation/)
