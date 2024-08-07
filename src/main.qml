@@ -68,6 +68,36 @@ Rectangle{
                     running: true
                 }
             }
+            Entity {
+                GoochMaterial {
+                    id: goochMaterial
+                    diffuse: Qt.rgba( 1, 1, 1, 1 )
+                }
+                Mesh {
+                    id: pyramidMesh
+                    source: "qrc:/src/pyramid.obj"
+                }
+                Transform {
+                    id: pyramidTransform
+                    property real myRotation: 0
+                    matrix: {
+                        var mat = Qt.matrix4x4();
+                        mat.rotate( myRotation, Qt.vector3d(1, 1, 1) );
+                        mat.scale(Qt.vector3d( 10, 10, 10 ));
+                        return mat;
+                    }
+                }
+                components: [ pyramidMesh, goochMaterial, pyramidTransform ]
+                NumberAnimation {
+                    target: pyramidTransform
+                    property: "myRotation"
+                    duration: 10000
+                    from: 0
+                    to: 360
+                    loops: Animation.Infinite
+                    running: true
+                }
+            }
         }
     }
 }
