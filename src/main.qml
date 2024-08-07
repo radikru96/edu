@@ -47,7 +47,26 @@ Rectangle{
                     id: sphereMesh
                     radius: 6
                 }
-                components: [ sphereMesh, phongMaterial ]
+                Transform {
+                    id: sphereTransform
+                    property real myParam: 0
+                    matrix: {
+                        var mat = Qt.matrix4x4();
+                        mat.rotate( myParam, Qt.vector3d(0, 1, 0) );
+                        mat.translate(Qt.vector3d( 24, 0, 0 ));
+                        return mat;
+                    }
+                }
+                components: [ sphereMesh, phongMaterial, sphereTransform ]
+                NumberAnimation {
+                    target: sphereTransform
+                    property: "myParam"
+                    duration: 10000
+                    from: 0
+                    to: 360
+                    loops: Animation.Infinite
+                    running: true
+                }
             }
         }
     }
