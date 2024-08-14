@@ -20,7 +20,7 @@ Rectangle {
             // axesOrientationMode: Accelerometer.FixedOrientation // breaks UI. Not allowed
             active: Qt.application.state
             onReadingChanged: {
-                rect.x += reading.x
+                rect.x -= reading.x
                 rect.y += reading.y
                 var maxX = mainRect.width - rect.width
                 var maxY = mainRect.height - rect.height
