@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="linjesuxus.QtEdu.QtQuickAccelerometer" android:installLocation="auto" android:versionCode="2" android:versionName="2.0">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="linjesuxus.QtEdu.QtQuickPosition" android:installLocation="auto" android:versionCode="1" android:versionName="1.1">
     <!-- %%INSERT_PERMISSIONS -->
     <!-- %%INSERT_FEATURES -->
     <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true"/>
-    <application android:name="org.qtproject.qt.android.bindings.QtApplication" android:extractNativeLibs="true" android:hardwareAccelerated="true" android:label="QtQuickAccelerometer" android:requestLegacyExternalStorage="true" android:allowNativeHeapPointerTagging="false" android:icon="@drawable/icon">
-        <activity android:name="org.qtproject.qt.android.bindings.QtActivity" android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation|mcc|mnc|density" android:label="QtQuickAccelerometer" android:launchMode="singleTop" android:screenOrientation="portrait">
+    <application android:name="org.qtproject.qt.android.bindings.QtApplication" android:extractNativeLibs="true" android:hardwareAccelerated="true" android:label="QtQuickPosition" android:requestLegacyExternalStorage="true" android:allowNativeHeapPointerTagging="false">
+        <activity android:name="org.qtproject.qt.android.bindings.QtActivity" android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation|mcc|mnc|density" android:label="QtQuickPosition" android:launchMode="singleTop" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
