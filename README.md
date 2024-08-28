@@ -71,3 +71,4 @@
 + [QtQuickOrientation](../QtQuickOrientation/)
 + [QtQuickAccelerometer](../QtQuickAccelerometer/)
 + [QtQuickPosition](../QtQuickPosition/)
++ [QtQuickPinch](../QtQuickPinch/)
