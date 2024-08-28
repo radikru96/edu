@@ -1,5 +1,4 @@
 import QtQuick
-import QtSensors
 
 Rectangle {
     id: mainRect
@@ -9,24 +8,25 @@ Rectangle {
     Rectangle {
         id: rect
         color: "white"
-        x: parent.width / 2
-        y: parent.height / 2
-        width: parent.width / 6
+        anchors.centerIn: parent
+        width: Math.min(mainRect.width, mainRect.height) / 2
         height: width
-        radius: width / 2
-        Accelerometer {
-            dataRate: 1000
-            // skipDuplicates: true // breaks UI. Not allowed
-            // axesOrientationMode: Accelerometer.FixedOrientation // breaks UI. Not allowed
-            active: Qt.application.state
-            onReadingChanged: {
-                rect.x -= reading.x
-                rect.y += reading.y
-                var maxX = mainRect.width - rect.width
-                var maxY = mainRect.height - rect.height
-                rect.x = rect.x > maxX ? maxX : rect.x < 0 ? 0 : rect.x
-                rect.y = rect.y > maxY ? maxY : rect.y < 0 ? 0 : rect.y
+        PinchArea {
+            anchors.fill: rect
+            pinch.minimumRotation: -360
+            pinch.maximumRotation: 360
+            pinch.minimumScale: 0.5
+            pinch.maximumScale: 2.0
+            onPinchStarted: print("PinchStarted")
+            onPinchUpdated: {
+                rect.rotation = -pinch.angle
+                var nW = rect.width * pinch.scale
+                var nMax = Math.min(mainRect.width, mainRect.height)
+                var nMin = nMax / 2
+                rect.width = nW > nMax ? nMax : nW < nMin ? nMin : nW
+                rect.height = rect.width
             }
+            onPinchFinished: print("PinchFinished")
         }
     }
 }
