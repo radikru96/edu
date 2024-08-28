@@ -70,3 +70,4 @@
 + [QtQuick.Scene3D.Animation](../QtQuick.Scene3D.Animation/)
 + [QtQuickOrientation](../QtQuickOrientation/)
 + [QtQuickAccelerometer](../QtQuickAccelerometer/)
++ [QtQuickPosition](../QtQuickPosition/)
