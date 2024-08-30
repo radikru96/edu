@@ -17,6 +17,7 @@ Rectangle {
         anchors.Bottom: main.bottom
         width: main.minDim / 6
         height: width
+        source: "qrc:/images/InfoButton.png"
         MouseArea {
             anchors.fill: infoButton
             onClicked: aboutDialog.visible = true
