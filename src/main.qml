@@ -75,4 +75,10 @@ Rectangle {
             }
         }
     }
+    MediaPlayer {
+        id: sound
+        source: "" // completed later list 65.7
+        loops: MediaPlayer.Infinite
+        volume: 1.0
+    }
 }
