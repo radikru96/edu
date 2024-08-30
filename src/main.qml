@@ -39,4 +39,12 @@ Rectangle {
         horizontalAlignment: Text.AlignHCenter
         text: main.alarm ? "DO NOT TOUCH IT!" : "Put your device\non a smooth surface"
     }
+    DelayButton {
+        id: btn
+        width: main.minDim / 1.5
+        height: width
+        anchors.centerIn: main
+        text: checked ? "Deactivate" : "Tap & Hold<br>to Activate"
+        onCheckedChanged: main.alarm = false
+    }
 }
