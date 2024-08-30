@@ -1,4 +1,4 @@
-QT += quick qml sensors
+QT += quick qml widgets sensors multimedia
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -21,21 +21,29 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 #DISTFILES += \
 resources.files += \
     src/main.qml
+    media/InfoButton.png
 resources.prefix = /
 
 RESOURCES = resources
 
-DISTFILES += \
-    android/AndroidManifest.xml \
-    android/build.gradle \
-    android/gradle.properties \
-    android/gradle/wrapper/gradle-wrapper.jar \
-    android/gradle/wrapper/gradle-wrapper.properties \
-    android/gradlew \
-    android/gradlew.bat \
-    android/res/values/libs.xml
+APP_FILES.files += media/alarm.mp3
+android {
+    DISTFILES += \
+        android/AndroidManifest.xml \
+        android/build.gradle \
+        android/gradle.properties \
+        android/gradle/wrapper/gradle-wrapper.jar \
+        android/gradle/wrapper/gradle-wrapper.properties \
+        android/gradlew \
+        android/gradlew.bat \
+        android/res/values/libs.xml
 
-contains(ANDROID_TARGET_ARCH,arm64-v8a) {
-    ANDROID_PACKAGE_SOURCE_DIR = \
-        $$PWD/android
+    contains(ANDROID_TARGET_ARCH,arm64-v8a) {
+        ANDROID_PACKAGE_SOURCE_DIR = \
+            $$PWD/android
+    }
+
+    APP_FILES.path = /assets/Resources
+    APP_FILES.Depends += FORCE
+    INSTALLS += APP_FILES
 }
