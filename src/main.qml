@@ -81,4 +81,13 @@ Rectangle {
         loops: MediaPlayer.Infinite
         volume: 1.0
     }
+    onAlarmChanged: {
+        if (alarm) {
+            sound.play()
+            timer.start()
+        } else {
+            sound.stop()
+            timer.stop()
+        }
+    }
 }
