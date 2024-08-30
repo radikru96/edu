@@ -1,6 +1,6 @@
 import QtQuick
 // import QtQuick.Dialogs
-// import QtQuick.Controls
+import QtQuick.Controls
 import QtMultimedia
 import QtSensors
 import Qt.labs.platform
@@ -27,5 +27,15 @@ Rectangle {
         visible: false
         title: "Do not touch it for " + Qt.platform.os
         text: "Version 1.0"
+    }
+    Text {
+        anchors {
+            top: main.top
+            horizontalCenter: main.horizontalCenter
+        }
+        font.pixelSize: main.minDim / 15
+        font.bold: true
+        horizontalAlignment: Text.AlignHCenter
+        text: main.alarm ? "DO NOT TOUCH IT!" : "Put your device\non a smooth surface"
     }
 }
