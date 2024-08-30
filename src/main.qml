@@ -60,4 +60,19 @@ Rectangle {
             }
         }
     }
+    Timer {
+        id: timer
+        interval: 250
+        repeat: true
+        property bool bBlink: false
+        onTriggered: {
+            main.color = bBlink ? "white" : "red"
+            bBlink = !bBlink
+        }
+        onRunningChanged: {
+            if (!running) {
+                main.color = "white"
+            }
+        }
+    }
 }
