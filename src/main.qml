@@ -47,4 +47,17 @@ Rectangle {
         text: checked ? "Deactivate" : "Tap & Hold<br>to Activate"
         onCheckedChanged: main.alarm = false
     }
+    Gyroscope {
+        active: btn.checked
+        alwaysOn: btn.checked
+        Sensor.axesOrientationMode: Gyroscope.FixedOrientation
+        Sensor.skipDuplicates: true
+        onReadingChanged: {
+            var movement = Math.max(Math.abs(reading.x), Math.abs(reading.y),
+                                    Math.abs(reading.z))
+            if (movement > 10 && btn.checked) {
+                main.alarm = true
+            }
+        }
+    }
 }
