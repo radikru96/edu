@@ -1,4 +1,4 @@
-QT += quick qml widgets sensors multimedia
+QT += quick qml widgets sensors multimedia quickwidgets
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -20,7 +20,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 #DISTFILES += \
 resources.files += \
-    src/main.qml
+    src/main.qml \
     media/InfoButton.png
 resources.prefix = /
 

@@ -1,62 +1,70 @@
 import QtQuick
-// import QtQuick.Dialogs
 import QtQuick.Controls
 import QtMultimedia
 import QtSensors
 import Qt.labs.platform
 
 Rectangle {
-    id: main
+    id: mainRect
     width: 320
     height: 480
     property int minDim: Math.min(width, height)
     property bool alarm: false
-
-    Image {
+    color: "black"
+    Item {
         id: infoButton
-        anchors.Bottom: main.bottom
-        width: main.minDim / 6
+        anchors.bottom: mainRect.bottom
+        width: mainRect.minDim / 6
         height: width
-        source: "qrc:/media/InfoButton.png"
+        Image {
+            source: "qrc:/media/InfoButton.png"
+            visible: true
+            anchors.fill: infoButton
+        }
         MouseArea {
             anchors.fill: infoButton
-            onClicked: aboutDialog.visible = true
+            onClicked: aboutDialog.open()
         }
     }
+
     MessageDialog {
         id: aboutDialog
-        visible: false
-        title: "Do not touch it for " + Qt.platform.os
-        text: "Version 1.0"
+        text: "Do not touch it for " + Qt.platform.os
+        informativeText: "Version " + Qt.application.version
+        buttons: MessageDialog.Ok
     }
     Text {
         anchors {
-            top: main.top
-            horizontalCenter: main.horizontalCenter
+            top: mainRect.top
+            horizontalCenter: mainRect.horizontalCenter
         }
-        font.pixelSize: main.minDim / 15
+        font.pixelSize: mainRect.minDim / 15
         font.bold: true
         horizontalAlignment: Text.AlignHCenter
-        text: main.alarm ? "DO NOT TOUCH IT!" : "Put your device\non a smooth surface"
+        text: mainRect.alarm ? "DO NOT TOUCH IT!" : "Put your device\non a smooth surface"
+        color: "gray"
     }
     DelayButton {
         id: btn
-        width: main.minDim / 1.5
+        width: mainRect.minDim / 1.5
         height: width
-        anchors.centerIn: main
+        anchors.centerIn: mainRect
         text: checked ? "Deactivate" : "Tap & Hold<br>to Activate"
-        onCheckedChanged: main.alarm = false
+        onCheckedChanged: mainRect.alarm = false
+        // background: Rectangle {
+        //     color: btn.pressed ? "DarkGray" : "gray"
+        // }
     }
     Gyroscope {
         active: btn.checked
         alwaysOn: btn.checked
-        Sensor.axesOrientationMode: Gyroscope.FixedOrientation
-        Sensor.skipDuplicates: true
+        // Sensor.axesOrientationMode: Gyroscope.FixedOrientation
+        // Sensor.skipDuplicates: true
         onReadingChanged: {
             var movement = Math.max(Math.abs(reading.x), Math.abs(reading.y),
                                     Math.abs(reading.z))
             if (movement > 10 && btn.checked) {
-                main.alarm = true
+                mainRect.alarm = true
             }
         }
     }
@@ -66,20 +74,20 @@ Rectangle {
         repeat: true
         property bool bBlink: false
         onTriggered: {
-            main.color = bBlink ? "white" : "red"
+            mainRect.color = bBlink ? "black" : "darkRed"
             bBlink = !bBlink
         }
         onRunningChanged: {
             if (!running) {
-                main.color = "white"
+                mainRect.color = "black"
             }
         }
     }
     MediaPlayer {
         id: sound
-        source: "" // completed later list 65.7
+        source: (assetsPath + "alarm.mp3")
         loops: MediaPlayer.Infinite
-        volume: 1.0
+        // volume: 1.0
     }
     onAlarmChanged: {
         if (alarm) {
